@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TrabalhoFinalFBDImplementacao:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TrabalhoFinalFBDImplementacao_jar</output-path>
+    <root id="archive" name="TrabalhoFinalFBDImplementacao.jar">
+      <element id="module-output" name="TrabalhoFinalFBDImplementacao" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/postgresql-42.2.5.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

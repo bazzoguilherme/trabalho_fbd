@@ -56,16 +56,6 @@ WHERE marca=X2
 GROUP BY codProduto, nomeProduto
 HAVING AVG(nota) >= X1;
 
--- Cliente que efetuou a maior quantidade de compras de produtos da marca X
-SELECT DISTINCT cpf, nomeCliente
-FROM CLIENTE 
-WHERE cpf C IN (SELECT DISTINCT cpf
-				FROM PEDIDO JOIN COMPRA USING(numeroPedido)
-				WHERE codProduto IN (SELECT DISTINCT codProduto
-									 FROM PRODUTO
-									 WHERE marca = X)
-				)
-
 
 -- os vendedores que venderam todas as marcas que o vendedor X vendeu
 
@@ -78,9 +68,13 @@ WHERE desconto >= 5 AND codProduto IN(SELECT DISTINCT codProduto
 									  WHERE desconto >= 5);
 
 
--- Os produtos com maiores cupons de descontos que estão no carrinho do usuario Y
-SELECT nomeProduto
-FROM produto
+-- Selecionar os produtos de uma empresa X em que a quantidade de seleções em carrinhos é maior que a quantidade desse produto em estoque.
+SELECT distinct nomeParceiro, telefone, codProduto
+FROM PARCEIRO JOIN PRODUTO ON(cnpj = cnpjVendedor)
+WHERE codProduto IN (SELECT DISTINCT codProduto
+					 FROM PRODUTO JOIN SELECAO USING(codProduto)
+					 GROUP BY codProduto
+					 HAVING SUM(quantidade) > estoque);
 
 ----------- GATILHOS
 CREATE TRIGGER verificaEstoque

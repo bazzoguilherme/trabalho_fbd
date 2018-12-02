@@ -27,7 +27,7 @@ public class userInterface {
     }
 
     public static void menu(){
-        
+
     }
 
     private static void imprimeOpcoesManipulacoes(){

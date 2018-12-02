@@ -201,8 +201,8 @@ create table PEDIDO(
 create table COMPRA(
     codProduto          char(10) not null,
     numeroPedido        char(10) not null,
-    valor               numeric not null,
     quantidade          numeric not null,
+    valor               numeric not null,
     numeroNotaFiscal    char(10) not null, -- Fusão de tableas COMPRA e NOTA_FISCAL
     foreign key (codProduto) references PRODUTO
         on delete restrict

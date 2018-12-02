@@ -264,7 +264,7 @@ INSERT into PRODUTO values('pr00000023', 'Como as democracias morrem',      'ZAH
 INSERT into PRODUTO values('pr00000024', 'Choque de Cultura: 79 filmes pra assistir enquanto dirige','GALERA', 32.00, 19, 'ct10', '63557512000135', '63557512000135', 'Capa comum: 240 páginas, Editora: Galera, Idioma: Português, ISBN-10: 8501115932, ISBN-13: 978-8501115935, Dimensões do produto: 22,8 x 15,4 x 2 cm');
 
 -- SELECAO: 'codProduto','idCarrinho','quantidade'
-INSERT into SELECAO values('pr00000001', 'c002', 2); -- 2 fones AKG K92              no carrino de   Luana
+INSERT into SELECAO values('pr00000001', 'c002', 40);-- 2 fones AKG K92              no carrino de   Luana
 INSERT into SELECAO values('pr00000005', 'c002', 1); -- 1 ipad mini 4                no carrino de   Luana
 INSERT into SELECAO values('pr00000010', 'c004', 1); -- 1 Apple X                    no carrino de   Vitor
 INSERT into SELECAO values('pr00000003', 'c008', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot

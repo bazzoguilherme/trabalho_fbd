@@ -1,4 +1,4 @@
--- Selecionar o nome de parceiros que venderam 3 ou mais produtos distintos.
+﻿-- Selecionar o nome de parceiros que venderam 3 ou mais produtos distintos.
 -- Utilização: pode ser utilizado para verificar os parceiros que mais vendem produtos distintos (ou não distintos, retirando-se o "Distinct" da cláusula having).
 SELECT nomeParceiro
 FROM PARCEIRO JOIN PRODUTO ON(cnpj = cnpjVendedor) NATURAL JOIN COMPRA

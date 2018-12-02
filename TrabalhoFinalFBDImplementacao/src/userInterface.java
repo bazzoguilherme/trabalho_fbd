@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class userInterface {
     private static Scanner input;
+    private static final String MANIPULACAO01 = "";
+    private static final String MANIPULACAO02 = "";
+    private static final String MANIPULACAO03 = "";
+    private static final String MANIPULACAO04 = "";
 
     public userInterface(){
         input = new Scanner(System.in);
@@ -22,6 +26,16 @@ public class userInterface {
         }
     }
 
+    public static void menu(){
+        
+    }
+
+    private static void imprimeOpcoesManipulacoes(){
+        System.out.println(MANIPULACAO01);
+        System.out.println(MANIPULACAO02);
+        System.out.println(MANIPULACAO03);
+    }
+
     public String pedeString(String pedido) {
         String entry;
 
@@ -29,6 +43,35 @@ public class userInterface {
         entry = input.nextLine();
 
         return entry;
+    }
+
+    public int pedeInt(String pedido) {
+
+        int num = 0;
+
+        System.out.println("Informe " + pedido);
+        num = this.pedeInt();
+
+        return num;
+    }
+
+    private int pedeInt(){
+        String entry;
+        boolean entradaAceita;
+        int num = 0;
+
+        do {
+            entradaAceita = true;
+            try {
+                entry = input.nextLine();
+                num = Integer.parseInt(entry);
+            } catch (java.lang.NumberFormatException e) {
+                entradaAceita = false;
+                System.out.println("Valor invalido. Digite novamente, por favor: ");
+            }
+        }while(!entradaAceita);
+
+        return num;
     }
 
     public String pedeSenha(){

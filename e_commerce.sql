@@ -186,7 +186,6 @@ create table AVALIACAO(
 
 create table PEDIDO(
     numeroPedido    char(10) not null,
-    total           numeric not null,
     data            date not null,
     cpf             char(11) not null,
     idPagamento     char(4) not null,
@@ -202,6 +201,7 @@ create table PEDIDO(
 create table COMPRA(
     codProduto          char(10) not null,
     numeroPedido        char(10) not null,
+    valor               numeric not null,
     quantidade          numeric not null,
     numeroNotaFiscal    char(10) not null, -- Fusão de tableas COMPRA e NOTA_FISCAL
     foreign key (codProduto) references PRODUTO

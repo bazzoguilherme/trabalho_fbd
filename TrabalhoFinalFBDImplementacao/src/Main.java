@@ -10,25 +10,17 @@ public class Main {
 //        String pass = new userInterface().pedeSenha();
 
         postgreSQLConnection.conectar();
+        try {
+            ResultSet rs = postgreSQLManipulacoes.todasCategoriasFoneOuvido();
 
-        String s = "SELECT MAX(salario) AS maxSalario FROM piloto WHERE companhia=?;";
-
-        PreparedStatement stmt = null;
-        try{
-            stmt = postgreSQLConnection.getConn().prepareStatement(s);
-
-            stmt.setString(1, "gol");
-            System.out.println(stmt);
-            ResultSet rs = stmt.executeQuery();
-
-            while(rs.next()){
-                System.out.println(rs.getInt("maxSalario"));
+            while (rs.next()) {
+                System.out.println(rs.getString("nomeCategoria"));
             }
-
         }catch (SQLException e){
             e.printStackTrace(System.err);
         }
 
+        userInterface.closeInputScanner();
         postgreSQLConnection.desconectar();
     }
 }

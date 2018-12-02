@@ -1,20 +1,20 @@
-drop table AVALIACAO;
-drop table COMPRA;
-drop table PEDIDO;
-drop table SELECAO;
-drop table PRODUTO;
-drop table PARCEIRO;
-drop table OFERTA;
-drop table CUPOM_DE_DESCONTO;
-drop table CARACTERIZACAO;
-drop table VALORACAO;
-drop table VALOR;
-drop table CATEGORIA;
-drop table PROPRIEDADE;
-drop table FORMA_DE_PAGAMENTO;
-drop table LOCAIS;
-drop table ENDERECO;
-drop table CLIENTE;
+drop table if  exists AVALIACAO;
+drop table if  exists COMPRA;
+drop table if  exists PEDIDO;
+drop table if  exists SELECAO;
+drop table if  exists PRODUTO;
+drop table if  exists PARCEIRO;
+drop table if  exists OFERTA;
+drop table if  exists CUPOM_DE_DESCONTO;
+drop table if  exists CARACTERIZACAO;
+drop table if  exists VALORACAO;
+drop table if  exists VALOR;
+drop table if  exists CATEGORIA;
+drop table if  exists PROPRIEDADE;
+drop table if  exists FORMA_DE_PAGAMENTO;
+drop table if  exists LOCAIS;
+drop table if  exists ENDERECO;
+drop table if  exists CLIENTE;
 
 create table CLIENTE(
     cpf         char(11) not null,

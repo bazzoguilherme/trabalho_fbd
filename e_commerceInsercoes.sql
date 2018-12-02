@@ -74,21 +74,21 @@ INSERT into CATEGORIA values ('ct27', 'Mochilas');
 INSERT into CATEGORIA values ('ct28', 'Malas');
 INSERT into CATEGORIA values ('ct29', 'Carteiras');
 
--- PROPRIEDADES: 'idPropriedade','nomePropriedade'
-INSERT into PROPRIEDADES value ('pr01', 'Wifi');
-INSERT into PROPRIEDADES value ('pr02', 'Bateria Inclusa');
-INSERT into PROPRIEDADES value ('pr03', 'Tamanho Memoria');
-INSERT into PROPRIEDADES value ('pr04', 'Tamanho HD');
-INSERT into PROPRIEDADES value ('pr05', 'Sistema Operacional');
-INSERT into PROPRIEDADES value ('pr06', 'Tamanho da Tela');
-INSERT into PROPRIEDADES value ('pr07', 'Cor');
-INSERT into PROPRIEDADES value ('pr08', 'Ano');
-INSERT into PROPRIEDADES value ('pr09', 'Processador');
-INSERT into PROPRIEDADES value ('pr10', 'DUAl SIM');
-INSERT into PROPRIEDADES value ('pr11', 'Voltagem');
-INSERT into PROPRIEDADES value ('pr12', 'Capacidade');
-INSERT into PROPRIEDADES value ('pr13', 'Bocas');
-INSERT into PROPRIEDADES value ('pr14', 'Idioma');
+-- PROPRIEDADE: 'idPropriedade','nomePropriedade'
+INSERT into PROPRIEDADE value ('pr01', 'Wifi');
+INSERT into PROPRIEDADE value ('pr02', 'Bateria Inclusa');
+INSERT into PROPRIEDADE value ('pr03', 'Tamanho Memoria');
+INSERT into PROPRIEDADE value ('pr04', 'Tamanho HD');
+INSERT into PROPRIEDADE value ('pr05', 'Sistema Operacional');
+INSERT into PROPRIEDADE value ('pr06', 'Tamanho da Tela');
+INSERT into PROPRIEDADE value ('pr07', 'Cor');
+INSERT into PROPRIEDADE value ('pr08', 'Ano');
+INSERT into PROPRIEDADE value ('pr09', 'Processador');
+INSERT into PROPRIEDADE value ('pr10', 'DUAl SIM');
+INSERT into PROPRIEDADE value ('pr11', 'Voltagem');
+INSERT into PROPRIEDADE value ('pr12', 'Capacidade');
+INSERT into PROPRIEDADE value ('pr13', 'Bocas');
+INSERT into PROPRIEDADE value ('pr14', 'Idioma');
 
 -- VALOR: 'idValor','valor'
 INSERT into VALOR value ('v001', 'SIM');
@@ -239,7 +239,7 @@ INSERT into PARCEIRO value('61822472000114', 'TOTAL ENTREGAS',  'ENTREGADOR',   
 INSERT into PARCEIRO value('46515978000156', 'SUA CASA ELETRO', 'VENDEDOR E ENTREGADOR','Ana lucia,1450,,93560223',             '4932615859', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
 
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO value ('pd00000001', 261.00,  '2018-11-23', '01517112056', 'fp01'); -- pr00000001 10% pelo boleto
+INSERT into PEDIDO value ('pd00000001', 232.00,  '2018-11-23', '01517112056', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto
 INSERT into PEDIDO value ('pd00000002', 5076.90, '2018-11-23', '01517112056', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto
 INSERT into PEDIDO value ('pd00000003', 2564.15, '2018-11-23', '01517112056', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal
 INSERT into PEDIDO value ('pd00000004', 3875.55, '2018-11-23', '01517112056', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito
@@ -248,9 +248,9 @@ INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01517112056', 'f
 INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao
 INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '01517112056', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito
 INSERT into PEDIDO value ('pd00000009', 2549.00, '2018-11-23', '01517112056', 'fp02'); -- pr00000013 Cartao de Cretido
-INSERT into PEDIDO value ('pd00000010', 5641.00, '2018-11-23', '01517112056', 'fp05');
+INSERT into PEDIDO value ('pd00000010', 7649.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao
 
--- PRODUTO: 'idProduto','nomeProduto','marca',preco,estoque,'idCategoria','cnpjVendedor','cnpjEntregador','fichaTecnica','idOferta'
+-- PRODUTO: 'codProduto','nomeProduto','marca',preco,estoque,'idCategoria','cnpjVendedor','cnpjEntregador','fichaTecnica','idOferta'
 INSERT into PRODUTO values('pr00000001', 'Fone de ouvido AKG K92',          'AKG',          290.00,     20, 'ct03', '90798145000172', '30261178000157', 'Nome da marca: AKG, Modelo: K92, Ano do modelo: 2016, Número da peça: K92, Baterias inclusas: Não, Funciona com baterias: Não, Inclui adaptador Ac:Não');
 INSERT into PRODUTO values('pr00000002', 'Fone de ouvido AKG K72',          'AKG',          280.00,     15, 'ct03', '90798145000172', '30261178000157', 'Nome da marca: AKG, Modelo: K72, Ano do modelo: 2016, Número da peça: FBA_K72, Baterias inclusas: Não, Funciona com baterias: Não, Inclui bateria recarregável: Não, Inclui adaptador Ac: Não, Inclui controle remoto: Não');
 INSERT into PRODUTO values('pr00000003', 'Notebook Dell Inspiron Ultrafino','DELL',         5609.00,    30, 'ct02', '72667288000163', '72667288000163', 'Nome da marca: DELL, Cor: Cinza Marine, Marca do processador: Intel, Tipo de processador: Intel Core i7, Velocidade do processador: 4 GHz, Tamanho da memória: 16 GB, Tipo de Memória: DDR DRAM, Tamanho do HD: 1 TB, Interface do HD: Solid State, Plataforma de hardware: PC, Sistema operacional: Windows 10', 'of10'); -- Produto com 30% de desconto (Oferta)

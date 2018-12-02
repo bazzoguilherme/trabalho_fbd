@@ -277,15 +277,29 @@ INSERT into SELECAO values('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL      
 INSERT into SELECAO values('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
 
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO values ('pd00000001', 232.00,  '2018-11-23', '14525668485', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
-INSERT into PEDIDO values ('pd00000002', 5076.90, '2018-11-23', '14525668485', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto               -> Jeniffer
-INSERT into PEDIDO values ('pd00000003', 2564.15, '2018-11-23', '14525668485', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
-INSERT into PEDIDO values ('pd00000004', 3875.55, '2018-11-23', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
-INSERT into PEDIDO values ('pd00000005', 1509.36, '2018-11-23', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
-INSERT into PEDIDO values ('pd00000006', 2203.67, '2018-11-23', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
-INSERT into PEDIDO values ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
-INSERT into PEDIDO values ('pd00000008', 5641.00, '2018-11-23', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
-INSERT into PEDIDO values ('pd00000009', 2549.00, '2018-11-23', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
-INSERT into PEDIDO values ('pd00000010', 7649.15, '2018-11-23', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
+INSERT into PEDIDO values ('pd00000001', 469.80,  '2018-06-20', '14525668485', 'fp01'); -- 2*pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
+INSERT into PEDIDO values ('pd00000002', 5134.50, '2018-07-27', '14525668485', 'fp01'); -- pr00000003 + 3*pr00000024 10% pelo boleto               -> Jeniffer
+INSERT into PEDIDO values ('pd00000003', 5128.29, '2018-07-28', '14525668485', 'fp04'); -- 2*pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
+INSERT into PEDIDO values ('pd00000004', 3875.55, '2018-08-02', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
+INSERT into PEDIDO values ('pd00000005', 1509.36, '2018-08-07', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
+INSERT into PEDIDO values ('pd00000006', 2203.67, '2018-08-20', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
+INSERT into PEDIDO values ('pd00000007', 2719.15, '2018-09-11', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
+INSERT into PEDIDO values ('pd00000008', 5641.00, '2018-09-12', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
+INSERT into PEDIDO values ('pd00000009', 2549.00, '2018-10-01', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
+INSERT into PEDIDO values ('pd00000010', 7649.15, '2018-10-31', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
+
+-- COMPRA: 'codProduto','numeroPedido',quantidade,'numeroNotaFiscal'
+INSERT into COMPRA values('pr00000001','pd00000001',2,'n000000001');
+INSERT into COMPRA values('pr00000003','pd00000002',1,'n000000002');
+INSERT into COMPRA values('pr00000024','pd00000002',3,'n000000003');
+INSERT into COMPRA values('pr00000005','pd00000003',2,'n000000004');
+INSERT into COMPRA values('pr00000015','pd00000004',1,'n000000005');
+INSERT into COMPRA values('pr00000022','pd00000004',1,'n000000006');
+INSERT into COMPRA values('pr00000006','pd00000005',1,'n000000007');
+INSERT into COMPRA values('pr00000011','pd00000006',1,'n000000008');
+INSERT into COMPRA values('pr00000021','pd00000007',1,'n000000009');
+INSERT into COMPRA values('pr00000023','pd00000008',1,'n000000010');
+INSERT into COMPRA values('pr00000013','pd00000009',1,'n000000011');
+INSERT into COMPRA values('pr00000002','pd00000010',1,'n000000012');
 
 -- AVALIACAO: 'idAvaliacao','data',nota,'comentario','cpf','codProduto'

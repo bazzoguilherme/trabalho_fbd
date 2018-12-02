@@ -238,17 +238,29 @@ INSERT into PARCEIRO value('46515936000156', 'ENTREGAS NA HORA','ENTREGADOR',   
 INSERT into PARCEIRO value('61822472000114', 'TOTAL ENTREGAS',  'ENTREGADOR',           'Luis Medel,517,,90566320',             '5132215521', 'As entregas são realizadas de segunda-feira a sexta-feira, das 9h às 22h. Excepcionalmente entregas podem ocorrer aos sábados e feriados. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
 INSERT into PARCEIRO value('46515978000156', 'SUA CASA ELETRO', 'VENDEDOR E ENTREGADOR','Ana lucia,1450,,93560223',             '4932615859', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
 
+-- SELECAO: 'codProduto','idCarrinho','quantidade'
+INSERT into SELECAO value('pr00000001', 'cr02', 2); -- 2 fones AKG K92              no carrino de   Luana
+INSERT into SELECAO value('pr00000005', 'cr02', 1); -- 1 ipad mini 4                no carrino de   Luana
+INSERT into SELECAO value('pr00000010', 'cr04', 1); -- 1 Apple X                    no carrino de   Vitor
+INSERT into SELECAO value('pr00000003', 'cr08', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot
+INSERT into SELECAO value('pr00000002', 'cr08', 1); -- 1 fone AKG K72               no carrino de   Elliot
+INSERT into SELECAO value('pr00000024', 'cr08', 3); -- 3 livros "79 filmes ..."     no carrino de   Elliot
+INSERT into SELECAO value('pr00000021', 'cr07', 1); -- 1 lava louças                no carrino de   Ana Maria
+INSERT into SELECAO value('pr00000019', 'cr09', 1); -- 1 cooktop                    no carrino de   Luiza
+INSERT into SELECAO value('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL           no carrino de   Luiza
+INSERT into SELECAO value('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
+
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO value ('pd00000001', 232.00,  '2018-11-23', '01517112056', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto
-INSERT into PEDIDO value ('pd00000002', 5076.90, '2018-11-23', '01517112056', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto
-INSERT into PEDIDO value ('pd00000003', 2564.15, '2018-11-23', '01517112056', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal
-INSERT into PEDIDO value ('pd00000004', 3875.55, '2018-11-23', '01517112056', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito
-INSERT into PEDIDO value ('pd00000005', 1509.36, '2018-11-23', '01517112056', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal
-INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01517112056', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal
-INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao
-INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '01517112056', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito
-INSERT into PEDIDO value ('pd00000009', 2549.00, '2018-11-23', '01517112056', 'fp02'); -- pr00000013 Cartao de Cretido
-INSERT into PEDIDO value ('pd00000010', 7649.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao
+INSERT into PEDIDO value ('pd00000001', 232.00,  '2018-11-23', '14525668485', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
+INSERT into PEDIDO value ('pd00000002', 5076.90, '2018-11-23', '14525668485', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto               -> Jeniffer
+INSERT into PEDIDO value ('pd00000003', 2564.15, '2018-11-23', '14525668485', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
+INSERT into PEDIDO value ('pd00000004', 3875.55, '2018-11-23', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
+INSERT into PEDIDO value ('pd00000005', 1509.36, '2018-11-23', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
+INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
+INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
+INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
+INSERT into PEDIDO value ('pd00000009', 2549.00, '2018-11-23', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
+INSERT into PEDIDO value ('pd00000010', 7649.15, '2018-11-23', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
 
 -- PRODUTO: 'codProduto','nomeProduto','marca',preco,estoque,'idCategoria','cnpjVendedor','cnpjEntregador','fichaTecnica','idOferta'
 INSERT into PRODUTO values('pr00000001', 'Fone de ouvido AKG K92',          'AKG',          290.00,     20, 'ct03', '90798145000172', '30261178000157', 'Nome da marca: AKG, Modelo: K92, Ano do modelo: 2016, Número da peça: K92, Baterias inclusas: Não, Funciona com baterias: Não, Inclui adaptador Ac:Não');

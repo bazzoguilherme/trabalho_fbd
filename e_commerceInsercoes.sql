@@ -23,11 +23,11 @@ INSERT into CLIENTE values ('32250156034', 'Luiza Soares',  'soaresluiza@hotmail
 INSERT into CLIENTE values ('01565652046', 'Eliza Souza',   'souzaeliza@gmail.com',     'rainhaEliza',  'cr10');
 
 -- FORMAS_DE_PAGAMENTO: 'idPagamento','tipo',desconto,parcelaMinima
-INSERT into FORMAS_DE_PAGAMENTO values ('fp01', 'Boleto Bancario', 10, 300);
+INSERT into FORMAS_DE_PAGAMENTO values ('fp01', 'Boleto Bancario', 10, 500);
 INSERT into FORMAS_DE_PAGAMENTO values ('fp02', 'Cartao de Credito', 0, 200);
 INSERT into FORMAS_DE_PAGAMENTO values ('fp03', 'Cartao de Debito', 0, 700);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp04', 'PayPal', 5, 400);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp05', 'E-cartao', 15, 200);
+INSERT into FORMAS_DE_PAGAMENTO values ('fp04', 'PayPal', 5, 300);
+INSERT into FORMAS_DE_PAGAMENTO values ('fp05', 'E-cartao', 15, 150);
 
 -- LOCAIS: 'cpf','idEndereco'
 INSERT into LOCAIS values ('01517112056', 'ed01');
@@ -48,7 +48,7 @@ INSERT into CATEGORIA values ('ct01', 'Celulares');
 INSERT into CATEGORIA values ('ct02', 'Computadores');
 INSERT into CATEGORIA values ('ct03', 'Fones de Ouvido');
 INSERT into CATEGORIA values ('ct04', 'Maquinas de lavar');
-INSERT into CATEGORIA values ('ct05', 'Geladeias');
+INSERT into CATEGORIA values ('ct05', 'Geladeiras');
 INSERT into CATEGORIA values ('ct06', 'Fogoes');
 INSERT into CATEGORIA values ('ct07', 'Microondas');
 INSERT into CATEGORIA values ('ct08', 'Cooktops');
@@ -226,7 +226,7 @@ INSERT into CUPOM_DE_DESCONTO values('cd08', '2020-06-15', 5,  'ct16'); -- desco
 INSERT into CUPOM_DE_DESCONTO values('cd09', '2019-03-30', 10, 'ct12'); -- desconto de 10% em monitores
 INSERT into CUPOM_DE_DESCONTO values('cd10', '2019-11-06', 50, 'ct20'); -- desconto de 50% em papelaria
 
--- PARCEIRO: 'cnpj','nome','papel','endereco','telefone','politica'
+-- PARCEIRO: 'cnpj','nomeParceiro','papel','endereco','telefone','politica'
 INSERT into PARCEIRO value('72667288000163', 'DELL',            'VENDEDOR E ENTREGADOR','Fernando João Bartelle,35,,95178030',  '5132681445', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega.');
 INSERT into PARCEIRO value('90798145000172', 'AKG',             'VENDEDOR',             'Industrial Belgraf,400,,92990000',     '5432619586', 'Produtos podem ser devolvido em um prazo de até 7 dias após a entrega.');
 INSERT into PARCEIRO value('67457503000161', 'BRASTEMP',        'VENDEDOR E ENTREGADOR','Antonio Jose,520,,55486255',           '1132689998', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
@@ -239,16 +239,16 @@ INSERT into PARCEIRO value('61822472000114', 'TOTAL ENTREGAS',  'ENTREGADOR',   
 INSERT into PARCEIRO value('46515978000156', 'SUA CASA ELETRO', 'VENDEDOR E ENTREGADOR','Ana lucia,1450,,93560223',             '4932615859', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
 
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO value ('pd00000001', 261.00,  '2018-11-23', '01517112056', 'fp01'); -- pr00000001 10% desconto pelo boleto
-INSERT into PEDIDO value ('pd00000002', 5641.00, '2018-11-23', '01517112056', 'fp02'); -- pr00000003 + pr00000024 boleto
-INSERT into PEDIDO value ('pd00000003', 2429.19, '2018-11-23', '01517112056', 'fp08'); -- pr00000005 10% desconto PayPal e 10% do cupom sobre categoria tablet
-INSERT into PEDIDO value ('pd00000004', 3681.78, '2018-11-23', '01517112056', 'fp04'); -- pr00000015 + pr00000022 (5% desconto) + 5% de desconto na compra por cartão de credito
-INSERT into PEDIDO value ('pd00000005', 1558.80, '2018-11-23', '01517112056', 'fp09'); -- pr00000006 (10% oferta) (10% cupom) Paypal
-INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01517112056', 'fp05'); -- pr00000011 (15% oferta) 5% Paypal
-INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp01'); -- pr00000021 15% no cartão E-cartao
-INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '01517112056', 'fp01'); -- pr00000023 (15% oferta)
-INSERT into PEDIDO value ('pd00000009', 5641.00, '2018-11-23', '01517112056', 'fp01');
-INSERT into PEDIDO value ('pd00000010', 5641.00, '2018-11-23', '01517112056', 'fp01');
+INSERT into PEDIDO value ('pd00000001', 261.00,  '2018-11-23', '01517112056', 'fp01'); -- pr00000001 10% pelo boleto
+INSERT into PEDIDO value ('pd00000002', 5076.90, '2018-11-23', '01517112056', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto
+INSERT into PEDIDO value ('pd00000003', 2564.15, '2018-11-23', '01517112056', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal
+INSERT into PEDIDO value ('pd00000004', 3875.55, '2018-11-23', '01517112056', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito
+INSERT into PEDIDO value ('pd00000005', 1509.36, '2018-11-23', '01517112056', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal
+INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01517112056', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal
+INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao
+INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '01517112056', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito
+INSERT into PEDIDO value ('pd00000009', 2549.00, '2018-11-23', '01517112056', 'fp02'); -- pr00000013 Cartao de Cretido
+INSERT into PEDIDO value ('pd00000010', 5641.00, '2018-11-23', '01517112056', 'fp05');
 
 -- PRODUTO: 'idProduto','nomeProduto','marca',preco,estoque,'idCategoria','cnpjVendedor','cnpjEntregador','fichaTecnica','idOferta'
 INSERT into PRODUTO values('pr00000001', 'Fone de ouvido AKG K92',          'AKG',          290.00,     20, 'ct03', '90798145000172', '30261178000157', 'Nome da marca: AKG, Modelo: K92, Ano do modelo: 2016, Número da peça: K92, Baterias inclusas: Não, Funciona com baterias: Não, Inclui adaptador Ac:Não');

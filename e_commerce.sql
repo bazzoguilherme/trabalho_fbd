@@ -1,5 +1,5 @@
 create table PRODUTO(
-    idProduto       char(10) not null,
+    codProduto      char(10) not null,
     nomeProduto     varchar(60) not null,
     marca           varchar(30) not null,
     preco           numeric not null,
@@ -17,7 +17,7 @@ create table PRODUTO(
         on delete cascade,
     foreign key (cnpjEntregador) references PARCEIRO
         on delete cascade,
-    primary key(idProduto)
+    primary key(codProduto)
 );
 
 create table CLIENTE(
@@ -49,14 +49,14 @@ create table LOCAIS(
 );
 
 create table SELECAO(
-    idProduto   char(10) not null,
+    codProduto   char(10) not null,
     idCarrinho  char(4) not null,
     quantidade  numeric not null,
-    foreign key (idProduto) references PRODUTO
+    foreign key (codProduto) references PRODUTO
         on delete cascade,
     foreign key (idCarrinho) references CLEINTE(idCarrinho)
         on delete cascade,
-    primary key (idProduto, idCarrinho)
+    primary key (codProduto, idCarrinho)
 );
 
 create table AVALIACAO(
@@ -65,10 +65,10 @@ create table AVALIACAO(
     nota        numeric not null,
     comentario  varchar(100),
     cpf         char(11) not null,
-    idProduto   char(10) not null,
+    codProduto   char(10) not null,
     foreign key (cpf) references CLIENTE
         on delete set null,
-    foreign key (idProduto) references PRODUTO,
+    foreign key (codProduto) references PRODUTO,
     primary key(idAvaliacao)
 );
 
@@ -86,15 +86,15 @@ create table PEDIDO(
 );
 
 create table COMPRA(
-    idProduto       char(10) not null,
+    codProduto       char(10) not null,
     numeroPedido    char(10) not null,
     quantidade      numeric not null,
     numeroNotaFiscal char(4) not null, -- Fusão de tableas COMPRA e NOTA_FISCAL
-    foreign key (idProduto) references PRODUTO
+    foreign key (codProduto) references PRODUTO
         on delete restrict,
     foreign key (numeroP) references PEDIDO
         on delete restrict,
-    primary key (idProduto, numeroPedido)
+    primary key (codProduto, numeroPedido)
 );
 
 create table FORMA_DE_PAGAMENTO(

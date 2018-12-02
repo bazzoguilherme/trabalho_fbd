@@ -61,7 +61,7 @@ INSERT into CATEGORIA values ('ct14', 'Video Games');
 INSERT into CATEGORIA values ('ct15', 'Decoracao');
 INSERT into CATEGORIA values ('ct16', 'Roupas');
 INSERT into CATEGORIA values ('ct17', 'Joias');
-INSERT into CATEGORIA values ('ct18', 'Ferramentas de Cosntrucao');
+INSERT into CATEGORIA values ('ct18', 'Ferramentas de Construcao');
 INSERT into CATEGORIA values ('ct19', 'Ferramentas de Jardinagem');
 INSERT into CATEGORIA values ('ct20', 'Papelaria');
 INSERT into CATEGORIA values ('ct21', 'Liquidificadores');

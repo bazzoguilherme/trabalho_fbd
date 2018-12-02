@@ -277,15 +277,15 @@ INSERT into SELECAO values('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL      
 INSERT into SELECAO values('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
 
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO values ('pd00000001', 469.80,  '2018-06-20', '14525668485', 'fp01'); -- 2*pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
-INSERT into PEDIDO values ('pd00000002', 5134.50, '2018-07-27', '14525668485', 'fp01'); -- pr00000003 + 3*pr00000024 10% pelo boleto               -> Jeniffer
-INSERT into PEDIDO values ('pd00000003', 5128.29, '2018-07-28', '14525668485', 'fp04'); -- 2*pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
-INSERT into PEDIDO values ('pd00000004', 3875.55, '2018-08-02', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
-INSERT into PEDIDO values ('pd00000005', 1509.36, '2018-08-07', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
-INSERT into PEDIDO values ('pd00000006', 2203.67, '2018-08-20', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
-INSERT into PEDIDO values ('pd00000007', 2719.15, '2018-09-11', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
-INSERT into PEDIDO values ('pd00000008', 5641.00, '2018-09-12', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
-INSERT into PEDIDO values ('pd00000009', 2549.00, '2018-10-01', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
+INSERT into PEDIDO values ('pd00000001', 469.80,  '2018-06-20', '14525668485', 'fp01'); -- 2*pr00000001 (10% cupom - fones) 10% pelo boleto     -> Jeniffer
+INSERT into PEDIDO values ('pd00000002', 5134.50, '2018-07-27', '14525668485', 'fp01'); -- pr00000003 + 3*pr00000024 10% pelo boleto            -> Jeniffer
+INSERT into PEDIDO values ('pd00000003', 5128.29, '2018-07-28', '14525668485', 'fp04'); -- 2*pr00000005 (10% cupom - tablet) 5% PayPal          -> Jeniffer
+INSERT into PEDIDO values ('pd00000004', 3875.55, '2018-08-02', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito   -> Nicole
+INSERT into PEDIDO values ('pd00000005', 1509.36, '2018-08-07', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal        -> Matheus
+INSERT into PEDIDO values ('pd00000006', 2203.67, '2018-08-20', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                    -> Ana Maria
+INSERT into PEDIDO values ('pd00000007', 2719.15, '2018-09-11', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                    -> Pablo Dias
+INSERT into PEDIDO values ('pd00000008', 5641.00, '2018-09-12', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito             -> Nicole
+INSERT into PEDIDO values ('pd00000009', 2549.00, '2018-10-01', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                         -> Ana Maria
 INSERT into PEDIDO values ('pd00000010', 7649.15, '2018-10-31', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
 
 -- COMPRA: 'codProduto','numeroPedido',quantidade,'numeroNotaFiscal'
@@ -303,3 +303,15 @@ INSERT into COMPRA values('pr00000013','pd00000009',1,'n000000011');
 INSERT into COMPRA values('pr00000002','pd00000010',1,'n000000012');
 
 -- AVALIACAO: 'idAvaliacao','data',nota,'comentario','cpf','codProduto'
+INSERT into AVALIACAO values('a001','2018-07-15',4,'Fone incrivel! De algum modo ele fez minhas musicas favoritas ainda melhores!','14525668485','pr00000001');
+INSERT into AVALIACAO values('a002','2018-08-10',5,'INCRIVEL! Muito rapido esse not, consigo fazer de tudo nele em um instante (isso se a internet ajudar haha)','14525668485','pr00000003');
+INSERT into AVALIACAO values('a003','2018-08-21',5,'Sensacional esse livro, nunca me diverti tanto lendo um livro, Super recomendo! :)','14525668485','pr00000024');
+INSERT into AVALIACAO values('a004','2018-08-30',4,'Tablet muito leve e fácil de transportar, porém a bateria sempre acaba muito cedo','14525668485','pr00000005');
+INSERT into AVALIACAO values('a005','2018-09-01',3,'Estava esprando mais pelos dados dados pela empresa.','06555328996','pr00000015');
+INSERT into AVALIACAO values('a006','2018-09-01',4,'Não precisar molhar as mãos para lavar a louça é coisa de outro mundo! Dessa vez o inverno será sem gripe!.','06555328996','pr00000022');
+INSERT into AVALIACAO values('a007','2018-09-02',5,'Bom','61524522317','pr00000006');
+INSERT into AVALIACAO values('a008','2018-09-10',5,'Muito facil de usar e muito economica.','01262510965','pr00000011');
+INSERT into AVALIACAO values('a009','2018-09-15',5,'Otima lava louças. e é até multifuncinal, ela limpa até minhas roupas sujas.','01517112056','pr00000021');
+INSERT into AVALIACAO values('a010','2018-09-25',4,'Fica a reflexao, Brasil!!','06555328996','pr00000023');
+INSERT into AVALIACAO values('a011','2018-10-05',2,'Geladeira que deixa a casa toda gelada? horrível','01262510965','pr00000013');
+INSERT into AVALIACAO values('a012','2018-11-06',4,'Nos graves deixa a desejar um pouco, porém é um fone com ótimo custo benefício','01565652046','pr00000002');

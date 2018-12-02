@@ -75,132 +75,132 @@ INSERT into CATEGORIA values ('ct28', 'Malas');
 INSERT into CATEGORIA values ('ct29', 'Carteiras');
 
 -- PROPRIEDADE: 'idPropriedade','nomePropriedade'
-INSERT into PROPRIEDADE value ('pr01', 'Wifi');
-INSERT into PROPRIEDADE value ('pr02', 'Bateria Inclusa');
-INSERT into PROPRIEDADE value ('pr03', 'Tamanho Memoria');
-INSERT into PROPRIEDADE value ('pr04', 'Tamanho HD');
-INSERT into PROPRIEDADE value ('pr05', 'Sistema Operacional');
-INSERT into PROPRIEDADE value ('pr06', 'Tamanho da Tela');
-INSERT into PROPRIEDADE value ('pr07', 'Cor');
-INSERT into PROPRIEDADE value ('pr08', 'Ano');
-INSERT into PROPRIEDADE value ('pr09', 'Processador');
-INSERT into PROPRIEDADE value ('pr10', 'DUAl SIM');
-INSERT into PROPRIEDADE value ('pr11', 'Voltagem');
-INSERT into PROPRIEDADE value ('pr12', 'Capacidade');
-INSERT into PROPRIEDADE value ('pr13', 'Bocas');
-INSERT into PROPRIEDADE value ('pr14', 'Idioma');
+INSERT into PROPRIEDADE values ('pr01', 'Wifi');
+INSERT into PROPRIEDADE values ('pr02', 'Bateria Inclusa');
+INSERT into PROPRIEDADE values ('pr03', 'Tamanho Memoria');
+INSERT into PROPRIEDADE values ('pr04', 'Tamanho HD');
+INSERT into PROPRIEDADE values ('pr05', 'Sistema Operacional');
+INSERT into PROPRIEDADE values ('pr06', 'Tamanho da Tela');
+INSERT into PROPRIEDADE values ('pr07', 'Cor');
+INSERT into PROPRIEDADE values ('pr08', 'Ano');
+INSERT into PROPRIEDADE values ('pr09', 'Processador');
+INSERT into PROPRIEDADE values ('pr10', 'DUAl SIM');
+INSERT into PROPRIEDADE values ('pr11', 'Voltagem');
+INSERT into PROPRIEDADE values ('pr12', 'Capacidade');
+INSERT into PROPRIEDADE values ('pr13', 'Bocas');
+INSERT into PROPRIEDADE values ('pr14', 'Idioma');
 
 -- VALOR: 'idValor','valor'
-INSERT into VALOR value ('v001', 'SIM');
-INSERT into VALOR value ('v002', 'NAO');
-INSERT into VALOR value ('v003', '8 GB');
-INSERT into VALOR value ('v004', '16 GB');
-INSERT into VALOR value ('v005', '32 GB');
-INSERT into VALOR value ('v006', '64 GB');
-INSERT into VALOR value ('v007', '128 GB');
-INSERT into VALOR value ('v008', '256 GB');
-INSERT into VALOR value ('v009', '1 TB');
-INSERT into VALOR value ('v010', '2 TB');
-INSERT into VALOR value ('v011', 'Windows 10');
-INSERT into VALOR value ('v012', 'Android 7.0');
-INSERT into VALOR value ('v013', 'Android 8.0');
-INSERT into VALOR value ('v014', 'IOS');
-INSERT into VALOR value ('v015', '21.5 polegadas');
-INSERT into VALOR value ('v016', '23 polegadas');
-INSERT into VALOR value ('v017', '25 polegadas');
-INSERT into VALOR value ('v018', '27 polegadas');
-INSERT into VALOR value ('v019', 'Preto');
-INSERT into VALOR value ('v020', 'Cinza Marine');
-INSERT into VALOR value ('v021', 'Cinza Espacial');
-INSERT into VALOR value ('v022', 'Vermelho');
-INSERT into VALOR value ('v023', '2015');
-INSERT into VALOR value ('v024', '2016');
-INSERT into VALOR value ('v025', '2017');
-INSERT into VALOR value ('v026', '2018');
-INSERT into VALOR value ('v027', 'Intel');
-INSERT into VALOR value ('v028', '110 v');
-INSERT into VALOR value ('v029', '220 v');
-INSERT into VALOR value ('v030', '5 Kg');
-INSERT into VALOR value ('v031', '10 Kg');
-INSERT into VALOR value ('v032', '12 Kg');
-INSERT into VALOR value ('v033', '15 Kg');
-INSERT into VALOR value ('v034', '4 Bocas');
-INSERT into VALOR value ('v035', '5 Bocas');
-INSERT into VALOR value ('v036', 'Portugues');
-INSERT into VALOR value ('v037', 'Ingles');
+INSERT into VALOR values ('v001', 'SIM');
+INSERT into VALOR values ('v002', 'NAO');
+INSERT into VALOR values ('v003', '8 GB');
+INSERT into VALOR values ('v004', '16 GB');
+INSERT into VALOR values ('v005', '32 GB');
+INSERT into VALOR values ('v006', '64 GB');
+INSERT into VALOR values ('v007', '128 GB');
+INSERT into VALOR values ('v008', '256 GB');
+INSERT into VALOR values ('v009', '1 TB');
+INSERT into VALOR values ('v010', '2 TB');
+INSERT into VALOR values ('v011', 'Windows 10');
+INSERT into VALOR values ('v012', 'Android 7.0');
+INSERT into VALOR values ('v013', 'Android 8.0');
+INSERT into VALOR values ('v014', 'IOS');
+INSERT into VALOR values ('v015', '21.5 polegadas');
+INSERT into VALOR values ('v016', '23 polegadas');
+INSERT into VALOR values ('v017', '25 polegadas');
+INSERT into VALOR values ('v018', '27 polegadas');
+INSERT into VALOR values ('v019', 'Preto');
+INSERT into VALOR values ('v020', 'Cinza Marine');
+INSERT into VALOR values ('v021', 'Cinza Espacial');
+INSERT into VALOR values ('v022', 'Vermelho');
+INSERT into VALOR values ('v023', '2015');
+INSERT into VALOR values ('v024', '2016');
+INSERT into VALOR values ('v025', '2017');
+INSERT into VALOR values ('v026', '2018');
+INSERT into VALOR values ('v027', 'Intel');
+INSERT into VALOR values ('v028', '110 v');
+INSERT into VALOR values ('v029', '220 v');
+INSERT into VALOR values ('v030', '5 Kg');
+INSERT into VALOR values ('v031', '10 Kg');
+INSERT into VALOR values ('v032', '12 Kg');
+INSERT into VALOR values ('v033', '15 Kg');
+INSERT into VALOR values ('v034', '4 Bocas');
+INSERT into VALOR values ('v035', '5 Bocas');
+INSERT into VALOR values ('v036', 'Portugues');
+INSERT into VALOR values ('v037', 'Ingles');
 
 -- VALORACAO: 'idPropriedade','idValor'
-INSERT into VALORACAO value('pr01', 'v001');
-INSERT into VALORACAO value('pr01', 'v002');
-INSERT into VALORACAO value('pr02', 'v001');
-INSERT into VALORACAO value('pr02', 'v002');
-INSERT into VALORACAO value('pr03', 'v003');
-INSERT into VALORACAO value('pr03', 'v004');
-INSERT into VALORACAO value('pr03', 'v005');
-INSERT into VALORACAO value('pr03', 'v006');
-INSERT into VALORACAO value('pr03', 'v007');
-INSERT into VALORACAO value('pr03', 'v008');
-INSERT into VALORACAO value('pr04', 'v009');
-INSERT into VALORACAO value('pr04', 'v010');
-INSERT into VALORACAO value('pr05', 'v011');
-INSERT into VALORACAO value('pr05', 'v012');
-INSERT into VALORACAO value('pr05', 'v013');
-INSERT into VALORACAO value('pr05', 'v014');
-INSERT into VALORACAO value('pr06', 'v015');
-INSERT into VALORACAO value('pr06', 'v016');
-INSERT into VALORACAO value('pr06', 'v017');
-INSERT into VALORACAO value('pr06', 'v018');
-INSERT into VALORACAO value('pr07', 'v019');
-INSERT into VALORACAO value('pr07', 'v020');
-INSERT into VALORACAO value('pr07', 'v021');
-INSERT into VALORACAO value('pr07', 'v022');
-INSERT into VALORACAO value('pr08', 'v023');
-INSERT into VALORACAO value('pr08', 'v024');
-INSERT into VALORACAO value('pr08', 'v025');
-INSERT into VALORACAO value('pr08', 'v026');
-INSERT into VALORACAO value('pr09', 'v027');
-INSERT into VALORACAO value('pr10', 'v001');
-INSERT into VALORACAO value('pr10', 'v002');
-INSERT into VALORACAO value('pr11', 'v028');
-INSERT into VALORACAO value('pr11', 'v029');
-INSERT into VALORACAO value('pr12', 'v030');
-INSERT into VALORACAO value('pr12', 'v031');
-INSERT into VALORACAO value('pr12', 'v032');
-INSERT into VALORACAO value('pr12', 'v033');
-INSERT into VALORACAO value('pr13', 'v034');
-INSERT into VALORACAO value('pr13', 'v035');
-INSERT into VALORACAO value('pr14', 'v036');
-INSERT into VALORACAO value('pr14', 'v037');
+INSERT into VALORACAO values('pr01', 'v001');
+INSERT into VALORACAO values('pr01', 'v002');
+INSERT into VALORACAO values('pr02', 'v001');
+INSERT into VALORACAO values('pr02', 'v002');
+INSERT into VALORACAO values('pr03', 'v003');
+INSERT into VALORACAO values('pr03', 'v004');
+INSERT into VALORACAO values('pr03', 'v005');
+INSERT into VALORACAO values('pr03', 'v006');
+INSERT into VALORACAO values('pr03', 'v007');
+INSERT into VALORACAO values('pr03', 'v008');
+INSERT into VALORACAO values('pr04', 'v009');
+INSERT into VALORACAO values('pr04', 'v010');
+INSERT into VALORACAO values('pr05', 'v011');
+INSERT into VALORACAO values('pr05', 'v012');
+INSERT into VALORACAO values('pr05', 'v013');
+INSERT into VALORACAO values('pr05', 'v014');
+INSERT into VALORACAO values('pr06', 'v015');
+INSERT into VALORACAO values('pr06', 'v016');
+INSERT into VALORACAO values('pr06', 'v017');
+INSERT into VALORACAO values('pr06', 'v018');
+INSERT into VALORACAO values('pr07', 'v019');
+INSERT into VALORACAO values('pr07', 'v020');
+INSERT into VALORACAO values('pr07', 'v021');
+INSERT into VALORACAO values('pr07', 'v022');
+INSERT into VALORACAO values('pr08', 'v023');
+INSERT into VALORACAO values('pr08', 'v024');
+INSERT into VALORACAO values('pr08', 'v025');
+INSERT into VALORACAO values('pr08', 'v026');
+INSERT into VALORACAO values('pr09', 'v027');
+INSERT into VALORACAO values('pr10', 'v001');
+INSERT into VALORACAO values('pr10', 'v002');
+INSERT into VALORACAO values('pr11', 'v028');
+INSERT into VALORACAO values('pr11', 'v029');
+INSERT into VALORACAO values('pr12', 'v030');
+INSERT into VALORACAO values('pr12', 'v031');
+INSERT into VALORACAO values('pr12', 'v032');
+INSERT into VALORACAO values('pr12', 'v033');
+INSERT into VALORACAO values('pr13', 'v034');
+INSERT into VALORACAO values('pr13', 'v035');
+INSERT into VALORACAO values('pr14', 'v036');
+INSERT into VALORACAO values('pr14', 'v037');
 
 -- CARACTERIZACAO: 'idCategoria','idPropriedade'
-INSERT into CARACTERIZACAO value('ct01', 'pr01');
-INSERT into CARACTERIZACAO value('ct01', 'pr03');
-INSERT into CARACTERIZACAO value('ct01', 'pr05');
-INSERT into CARACTERIZACAO value('ct01', 'pr10');
-INSERT into CARACTERIZACAO value('ct02', 'pr01');
-INSERT into CARACTERIZACAO value('ct02', 'pr02');
-INSERT into CARACTERIZACAO value('ct02', 'pr04');
-INSERT into CARACTERIZACAO value('ct02', 'pr05');
-INSERT into CARACTERIZACAO value('ct02', 'pr06');
-INSERT into CARACTERIZACAO value('ct02', 'pr06');
-INSERT into CARACTERIZACAO value('ct02', 'pr07');
-INSERT into CARACTERIZACAO value('ct02', 'pr08');
-INSERT into CARACTERIZACAO value('ct02', 'pr09');
-INSERT into CARACTERIZACAO value('ct03', 'pr01');
-INSERT into CARACTERIZACAO value('ct03', 'pr02');
-INSERT into CARACTERIZACAO value('ct03', 'pr08');
-INSERT into CARACTERIZACAO value('ct04', 'pr11');
-INSERT into CARACTERIZACAO value('ct04', 'pr12');
-INSERT into CARACTERIZACAO value('ct05', 'pr11');
-INSERT into CARACTERIZACAO value('ct06', 'pr13');
-INSERT into CARACTERIZACAO value('ct07', 'pr11');
-INSERT into CARACTERIZACAO value('ct08', 'pr13');
-INSERT into CARACTERIZACAO value('ct09', 'pr11');
-INSERT into CARACTERIZACAO value('ct10', 'pr14');
-INSERT into CARACTERIZACAO value('ct11', 'pr01');
-INSERT into CARACTERIZACAO value('ct11', 'pr03');
-INSERT into CARACTERIZACAO value('ct11', 'pr05');
-INSERT into CARACTERIZACAO value('ct12', 'pr06');
+INSERT into CARACTERIZACAO values('ct01', 'pr01');
+INSERT into CARACTERIZACAO values('ct01', 'pr03');
+INSERT into CARACTERIZACAO values('ct01', 'pr05');
+INSERT into CARACTERIZACAO values('ct01', 'pr10');
+INSERT into CARACTERIZACAO values('ct02', 'pr01');
+INSERT into CARACTERIZACAO values('ct02', 'pr02');
+INSERT into CARACTERIZACAO values('ct02', 'pr04');
+INSERT into CARACTERIZACAO values('ct02', 'pr05');
+INSERT into CARACTERIZACAO values('ct02', 'pr06');
+INSERT into CARACTERIZACAO values('ct02', 'pr06');
+INSERT into CARACTERIZACAO values('ct02', 'pr07');
+INSERT into CARACTERIZACAO values('ct02', 'pr08');
+INSERT into CARACTERIZACAO values('ct02', 'pr09');
+INSERT into CARACTERIZACAO values('ct03', 'pr01');
+INSERT into CARACTERIZACAO values('ct03', 'pr02');
+INSERT into CARACTERIZACAO values('ct03', 'pr08');
+INSERT into CARACTERIZACAO values('ct04', 'pr11');
+INSERT into CARACTERIZACAO values('ct04', 'pr12');
+INSERT into CARACTERIZACAO values('ct05', 'pr11');
+INSERT into CARACTERIZACAO values('ct06', 'pr13');
+INSERT into CARACTERIZACAO values('ct07', 'pr11');
+INSERT into CARACTERIZACAO values('ct08', 'pr13');
+INSERT into CARACTERIZACAO values('ct09', 'pr11');
+INSERT into CARACTERIZACAO values('ct10', 'pr14');
+INSERT into CARACTERIZACAO values('ct11', 'pr01');
+INSERT into CARACTERIZACAO values('ct11', 'pr03');
+INSERT into CARACTERIZACAO values('ct11', 'pr05');
+INSERT into CARACTERIZACAO values('ct12', 'pr06');
 
 -- OFERTA: 'idOferta',desconto,freteGratis
 INSERT into OFERTA values('of01', 15, TRUE);
@@ -227,40 +227,16 @@ INSERT into CUPOM_DE_DESCONTO values('cd09', '2019-03-30', 10, 'ct12'); -- desco
 INSERT into CUPOM_DE_DESCONTO values('cd10', '2019-11-06', 50, 'ct20'); -- desconto de 50% em papelaria
 
 -- PARCEIRO: 'cnpj','nomeParceiro','papel','endereco','telefone','politica'
-INSERT into PARCEIRO value('72667288000163', 'DELL',            'VENDEDOR E ENTREGADOR','Fernando João Bartelle,35,,95178030',  '5132681445', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega.');
-INSERT into PARCEIRO value('90798145000172', 'AKG',             'VENDEDOR',             'Industrial Belgraf,400,,92990000',     '5432619586', 'Produtos podem ser devolvido em um prazo de até 7 dias após a entrega.');
-INSERT into PARCEIRO value('67457503000161', 'BRASTEMP',        'VENDEDOR E ENTREGADOR','Antonio Jose,520,,55486255',           '1132689998', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
-INSERT into PARCEIRO value('63557512000135', 'SUBMARINO',       'VENDEDOR E ENTREGADOR','Juscelino Kubitschek,1890,,55241789',  '1132257489', 'Não é aceita a devolução de qualquer pedido. Entregas realizadas de seguda-feira a sexta-feira, das 8h às 18h. A entrega só poode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
-INSERT into PARCEIRO value('30261178000157', 'ENTREGAS EXPRESS','ENTREGADOR',           'Lindoia,445,,95887666',                '1332612707', 'As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados.');
-INSERT into PARCEIRO value('26267787000146', 'CELULARES E CIA', 'VENDEDOR',             'Flor alta,25,,95586623',               '1132611488', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados.');
-INSERT into PARCEIRO value('26584520000182', 'ELECTROLUX',      'VENDEDOR',             'Pinheiro Machado,775,,95180000',       '5432265547', 'Produtos podem ser devolvido em um prazo de até 30 dias após a entrega. As entregas são realizadas de segunda-feira a quinta-feira, das 8h às 21h.');
-INSERT into PARCEIRO value('46515936000156', 'ENTREGAS NA HORA','ENTREGADOR',           'Independencia,747,,95889400',          '5132289566', 'As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
-INSERT into PARCEIRO value('61822472000114', 'TOTAL ENTREGAS',  'ENTREGADOR',           'Luis Medel,517,,90566320',             '5132215521', 'As entregas são realizadas de segunda-feira a sexta-feira, das 9h às 22h. Excepcionalmente entregas podem ocorrer aos sábados e feriados. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
-INSERT into PARCEIRO value('46515978000156', 'SUA CASA ELETRO', 'VENDEDOR E ENTREGADOR','Ana lucia,1450,,93560223',             '4932615859', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
-
--- SELECAO: 'codProduto','idCarrinho','quantidade'
-INSERT into SELECAO value('pr00000001', 'cr02', 2); -- 2 fones AKG K92              no carrino de   Luana
-INSERT into SELECAO value('pr00000005', 'cr02', 1); -- 1 ipad mini 4                no carrino de   Luana
-INSERT into SELECAO value('pr00000010', 'cr04', 1); -- 1 Apple X                    no carrino de   Vitor
-INSERT into SELECAO value('pr00000003', 'cr08', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot
-INSERT into SELECAO value('pr00000002', 'cr08', 1); -- 1 fone AKG K72               no carrino de   Elliot
-INSERT into SELECAO value('pr00000024', 'cr08', 3); -- 3 livros "79 filmes ..."     no carrino de   Elliot
-INSERT into SELECAO value('pr00000021', 'cr07', 1); -- 1 lava louças                no carrino de   Ana Maria
-INSERT into SELECAO value('pr00000019', 'cr09', 1); -- 1 cooktop                    no carrino de   Luiza
-INSERT into SELECAO value('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL           no carrino de   Luiza
-INSERT into SELECAO value('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
-
--- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
-INSERT into PEDIDO value ('pd00000001', 232.00,  '2018-11-23', '14525668485', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
-INSERT into PEDIDO value ('pd00000002', 5076.90, '2018-11-23', '14525668485', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto               -> Jeniffer
-INSERT into PEDIDO value ('pd00000003', 2564.15, '2018-11-23', '14525668485', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
-INSERT into PEDIDO value ('pd00000004', 3875.55, '2018-11-23', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
-INSERT into PEDIDO value ('pd00000005', 1509.36, '2018-11-23', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
-INSERT into PEDIDO value ('pd00000006', 2203.67, '2018-11-23', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
-INSERT into PEDIDO value ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
-INSERT into PEDIDO value ('pd00000008', 5641.00, '2018-11-23', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
-INSERT into PEDIDO value ('pd00000009', 2549.00, '2018-11-23', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
-INSERT into PEDIDO value ('pd00000010', 7649.15, '2018-11-23', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
+INSERT into PARCEIRO values('72667288000163', 'DELL',            'VENDEDOR E ENTREGADOR','Fernando João Bartelle,35,,95178030',  '5132681445', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega.');
+INSERT into PARCEIRO values('90798145000172', 'AKG',             'VENDEDOR',             'Industrial Belgraf,400,,92990000',     '5432619586', 'Produtos podem ser devolvido em um prazo de até 7 dias após a entrega.');
+INSERT into PARCEIRO values('67457503000161', 'BRASTEMP',        'VENDEDOR E ENTREGADOR','Antonio Jose,520,,55486255',           '1132689998', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
+INSERT into PARCEIRO values('63557512000135', 'SUBMARINO',       'VENDEDOR E ENTREGADOR','Juscelino Kubitschek,1890,,55241789',  '1132257489', 'Não é aceita a devolução de qualquer pedido. Entregas realizadas de seguda-feira a sexta-feira, das 8h às 18h. A entrega só poode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
+INSERT into PARCEIRO values('30261178000157', 'ENTREGAS EXPRESS','ENTREGADOR',           'Lindoia,445,,95887666',                '1332612707', 'As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados.');
+INSERT into PARCEIRO values('26267787000146', 'CELULARES E CIA', 'VENDEDOR',             'Flor alta,25,,95586623',               '1132611488', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados.');
+INSERT into PARCEIRO values('26584520000182', 'ELECTROLUX',      'VENDEDOR',             'Pinheiro Machado,775,,95180000',       '5432265547', 'Produtos podem ser devolvido em um prazo de até 30 dias após a entrega. As entregas são realizadas de segunda-feira a quinta-feira, das 8h às 21h.');
+INSERT into PARCEIRO values('46515936000156', 'ENTREGAS NA HORA','ENTREGADOR',           'Independencia,747,,95889400',          '5132289566', 'As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. Excepcionalmente entregas podem ocorrer aos sábados, domingos e feriados. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
+INSERT into PARCEIRO values('61822472000114', 'TOTAL ENTREGAS',  'ENTREGADOR',           'Luis Medel,517,,90566320',             '5132215521', 'As entregas são realizadas de segunda-feira a sexta-feira, das 9h às 22h. Excepcionalmente entregas podem ocorrer aos sábados e feriados. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
+INSERT into PARCEIRO values('46515978000156', 'SUA CASA ELETRO', 'VENDEDOR E ENTREGADOR','Ana lucia,1450,,93560223',             '4932615859', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega. As entregas são realizadas de segunda-feira a sexta-feira, das 8h às 21h. A entrega só pode ser realizada a uma pessoa maior de 18 anos que apresente documento de identificação.');
 
 -- PRODUTO: 'codProduto','nomeProduto','marca',preco,estoque,'idCategoria','cnpjVendedor','cnpjEntregador','fichaTecnica','idOferta'
 INSERT into PRODUTO values('pr00000001', 'Fone de ouvido AKG K92',          'AKG',          290.00,     20, 'ct03', '90798145000172', '30261178000157', 'Nome da marca: AKG, Modelo: K92, Ano do modelo: 2016, Número da peça: K92, Baterias inclusas: Não, Funciona com baterias: Não, Inclui adaptador Ac:Não');
@@ -287,3 +263,29 @@ INSERT into PRODUTO values('pr00000021', 'Lava Louças 14 Serviços',         'B
 INSERT into PRODUTO values('pr00000022', 'Lava Louças 10 Serviços Slim Branca','BRASTEMP',  2449.00,    40, 'ct09', '67457503000161', '67457503000161', 'Nome da marca: Brastemp, Peso do produto: 45,4 g, Dimensões do produto: 10 x 10 x 10 cm, Número da peça: 1168, Voltagem: 220 volts, Peso: 45.4 g', 'of02'); -- Produto com 5% de desconto e frete gratis (oferta)
 INSERT into PRODUTO values('pr00000023', 'Como as democracias morrem',      'ZAHAR',        42.00,      20, 'ct10', '63557512000135', '63557512000135', 'Capa comum: 272 páginas, Editora: Zahar; Edição: 1ª, Idioma: Português, ISBN-10: 9788537818008, ISBN-13: 978-8537818008, ASIN: 8537818003, Dimensões do produto: 22,9 x 16 x 1,8 cm', 'of01'); -- Produto com desconto de 15% e frete gratis (oferta)
 INSERT into PRODUTO values('pr00000024', 'Choque de Cultura: 79 filmes pra assistir enquanto dirige','GALERA', 32.00, 19, 'ct10', '63557512000135', '63557512000135', 'Capa comum: 240 páginas, Editora: Galera, Idioma: Português, ISBN-10: 8501115932, ISBN-13: 978-8501115935, Dimensões do produto: 22,8 x 15,4 x 2 cm');
+
+-- SELECAO: 'codProduto','idCarrinho','quantidade'
+INSERT into SELECAO values('pr00000001', 'cr02', 2); -- 2 fones AKG K92              no carrino de   Luana
+INSERT into SELECAO values('pr00000005', 'cr02', 1); -- 1 ipad mini 4                no carrino de   Luana
+INSERT into SELECAO values('pr00000010', 'cr04', 1); -- 1 Apple X                    no carrino de   Vitor
+INSERT into SELECAO values('pr00000003', 'cr08', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot
+INSERT into SELECAO values('pr00000002', 'cr08', 1); -- 1 fone AKG K72               no carrino de   Elliot
+INSERT into SELECAO values('pr00000024', 'cr08', 3); -- 3 livros "79 filmes ..."     no carrino de   Elliot
+INSERT into SELECAO values('pr00000021', 'cr07', 1); -- 1 lava louças                no carrino de   Ana Maria
+INSERT into SELECAO values('pr00000019', 'cr09', 1); -- 1 cooktop                    no carrino de   Luiza
+INSERT into SELECAO values('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL           no carrino de   Luiza
+INSERT into SELECAO values('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
+
+-- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
+INSERT into PEDIDO values ('pd00000001', 232.00,  '2018-11-23', '14525668485', 'fp01'); -- pr00000001 (10% cupom - fones) 10% pelo boleto        -> Jeniffer
+INSERT into PEDIDO values ('pd00000002', 5076.90, '2018-11-23', '14525668485', 'fp01'); -- pr00000003 + pr00000024 10% pelo boleto               -> Jeniffer
+INSERT into PEDIDO values ('pd00000003', 2564.15, '2018-11-23', '14525668485', 'fp04'); -- pr00000005 (10% cupom - tablet) 5% PayPal             -> Jeniffer
+INSERT into PEDIDO values ('pd00000004', 3875.55, '2018-11-23', '06555328996', 'fp02'); -- pr00000015 + pr00000022 (5% oferta) Cartao Credito    -> Nicole
+INSERT into PEDIDO values ('pd00000005', 1509.36, '2018-11-23', '61524522317', 'fp04'); -- pr00000006 (10% oferta) (10% cupom) 5% Paypal         -> Matheus
+INSERT into PEDIDO values ('pd00000006', 2203.67, '2018-11-23', '01262510965', 'fp04'); -- pr00000011 (15% oferta) 5% Paypal                     -> Ana Maria
+INSERT into PEDIDO values ('pd00000007', 2719.15, '2018-11-23', '01517112056', 'fp05'); -- pr00000021 15% no cartão E-cartao                     -> Pablo Dias
+INSERT into PEDIDO values ('pd00000008', 5641.00, '2018-11-23', '06555328996', 'fp03'); -- pr00000023 (15% oferta) Cartao de Debito              -> Nicole
+INSERT into PEDIDO values ('pd00000009', 2549.00, '2018-11-23', '01262510965', 'fp02'); -- pr00000013 Cartao de Cretido                          -> Ana Maria
+INSERT into PEDIDO values ('pd00000010', 7649.15, '2018-11-23', '01565652046', 'fp05'); -- pr00000002 (10% cupom - fones) + pr00000010 (15% cupom - celular) 15% E-cartao    -> Eliza 
+
+-- AVALIACAO: 'idAvaliacao','data',nota,'comentario','cpf','codProduto'

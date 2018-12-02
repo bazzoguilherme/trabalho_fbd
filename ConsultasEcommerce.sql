@@ -4,15 +4,28 @@ FROM PARCEIRO JOIN PRODUTO ON(cnpj = cnpjVendedor) NATURAL JOIN COMPRA
 GROUP BY nomeParceiro
 HAVING COUNT(DISTINCT codProduto) > X;
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Selecionar o nome das categorias que tem todas as propriedades (e talvez outas) que a categoria Fones de Ouvido (idCategoria = 'ct03')
 SELECT DISTINCT nomeCategoria
 FROM CATEGORIA C
 WHERE idCategoria != 'ct03' AND NOT EXISTS (SELECT *
-							                FROM CATEGORIZACAO
+							                FROM caracterizacao
 											WHERE idCategoria = 'ct03' AND idPropriedade NOT IN(SELECT DISTINCT idPropriedade
-											    												FROM CATEGORIZACAO
+											    												FROM caracterizacao
 																								WHERE idCategoria = C.idCategoria)); 
+																								
+-- Selecionar o nome dos produtos cuja categoria tem todas as propriedades (e talvez outas) que a categoria Fones de Ouvido (idCategoria = 'ct03')
+SELECT DISTINCT nomeProduto
+FROM produto P
+WHERE idCategoria != 'ct03' AND NOT EXISTS (SELECT *
+							                FROM caracterizacao
+											WHERE idCategoria = 'ct03' AND idPropriedade NOT IN(SELECT DISTINCT idPropriedade
+											    												FROM caracterizacao
+																								WHERE idCategoria = P.idCategoria)); 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+																								
 -- Selecionar o nome dos clientes que compraram produtos com preço maior que X
 
 -- O nome dos parceiros que já venderam e entregaram produtos
@@ -55,4 +68,35 @@ WHERE cpf C IN (SELECT DISTINCT cpf
 
 
 -- os vendedores que venderam todas as marcas que o vendedor X vendeu
--- maiores descontos
+
+
+-- Selecionar os produtos que apresentem uma oferta com desconto maior ou igual que 5% e um cupom de desconto com desconto maior ou igual que 5%
+SELECT DISTINCT codProduto, nomeProduto
+FROM produto NATURAL JOIN oferta
+WHERE desconto >= 5 AND codProduto IN(SELECT DISTINCT codProduto
+									  FROM produto NATURAL JOIN cupom_de_desconto
+									  WHERE desconto >= 5);
+									  
+
+----------- GATILHOS
+CREATE TRIGGER verificaEstoque
+AFTER INSERT ON compra
+REFERENCING NEW ROW AS nc
+FOR EACH ROW
+WHEN nc.quantidade > (SELECT quantidade 
+					  FROM produto
+					  WHERE codProduto = nc.codProduto)
+DELETE FROM compra WHERE codProduto = nc.codProduto AND numeroPedido = nc.numeroPedido
+
+CREATE TRIGGER verificaPedido
+AFTER INSERT ON avaliacao
+REFERENCING NEW ROW AS na
+FOR EACH ROW
+WHEN na.codProduto NOT IN(SELECT DISTINCT codProduto
+						  FROM produto JOIN compra USING(codProduto) JOIN pedido USING(numeroPedido)
+						  WHERE cpf = na.cpf)
+
+WHEN na.codProduto, na.cpf NOT IN (SELECT DISTINCT codProduto, cpf
+						   FROM produto JOIN compra USING(codProduto) JOIN pedido USING(numeroPedido));
+
+

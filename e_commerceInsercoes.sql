@@ -11,23 +11,16 @@ INSERT into ENDERECO values('ed09', 'Botafogo,200,,95652435');
 INSERT into ENDERECO values('ed10', 'Doze,19,101,98876532');
 
 -- CLIENTE: 'cpf','nome','email','senha','carrinho'
-INSERT into CLIENTE values ('01517112056', 'Pablo Dias',    'diaspablo@gmail.com',      'pablitoo',     'cr01');
-INSERT into CLIENTE values ('01251112021', 'Luana Brisola', 'brisolaluana@gmail.com',   'luadodia',     'cr02');
-INSERT into CLIENTE values ('06555328996', 'Nicole Silva',  'silvanicole@gmail.com',    'nicole2512',   'cr03');
-INSERT into CLIENTE values ('02565890014', 'Vitor Silva',   'silvavitor@hotmail.com',   'vivalavida',   'cr04');
-INSERT into CLIENTE values ('14525668485', 'Jeniffer Roffman','roffmanj@gmail.com',     'jenffman',     'cr05');
-INSERT into CLIENTE values ('61524522317', 'Matheus Simoes','simoesmatheus@yahoo.com',  '12345678',     'cr06');
-INSERT into CLIENTE values ('01262510965', 'Ana Maria',     'mariaana@gmail.com',       'lourojose',    'cr07');
-INSERT into CLIENTE values ('14452318654', 'Elliot',        'mrrobot@gmail.com',        'hackerman',    'cr08');
-INSERT into CLIENTE values ('32250156034', 'Luiza Soares',  'soaresluiza@hotmail.com',  'lulusoares',   'cr09');
-INSERT into CLIENTE values ('01565652046', 'Eliza Souza',   'souzaeliza@gmail.com',     'rainhaEliza',  'cr10');
-
--- FORMAS_DE_PAGAMENTO: 'idPagamento','tipo',desconto,parcelaMinima
-INSERT into FORMAS_DE_PAGAMENTO values ('fp01', 'Boleto Bancario', 10, 500);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp02', 'Cartao de Credito', 0, 200);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp03', 'Cartao de Debito', 0, 700);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp04', 'PayPal', 5, 300);
-INSERT into FORMAS_DE_PAGAMENTO values ('fp05', 'E-cartao', 15, 150);
+INSERT into CLIENTE values ('01517112056', 'Pablo Dias',    'diaspablo@gmail.com',      'pablitoo',     'c001');
+INSERT into CLIENTE values ('01251112021', 'Luana Brisola', 'brisolaluana@gmail.com',   'luadodia',     'c002');
+INSERT into CLIENTE values ('06555328996', 'Nicole Silva',  'silvanicole@gmail.com',    'nicole2512',   'c003');
+INSERT into CLIENTE values ('02565890014', 'Vitor Silva',   'silvavitor@hotmail.com',   'vivalavida',   'c004');
+INSERT into CLIENTE values ('14525668485', 'Jeniffer Roffman','roffmanj@gmail.com',     'jenffman',     'c005');
+INSERT into CLIENTE values ('61524522317', 'Matheus Simoes','simoesmatheus@yahoo.com',  '12345678',     'c006');
+INSERT into CLIENTE values ('01262510965', 'Ana Maria',     'mariaana@gmail.com',       'lourojose',    'c007');
+INSERT into CLIENTE values ('14452318654', 'Elliot',        'mrrobot@gmail.com',        'hackerman',    'c008');
+INSERT into CLIENTE values ('32250156034', 'Luiza Soares',  'soaresluiza@hotmail.com',  'lulusoares',   'c009');
+INSERT into CLIENTE values ('01565652046', 'Eliza Souza',   'souzaeliza@gmail.com',     'rainhaEliza',  'c010');
 
 -- LOCAIS: 'cpf','idEndereco'
 INSERT into LOCAIS values ('01517112056', 'ed01');
@@ -41,6 +34,13 @@ INSERT into LOCAIS values ('14452318654', 'ed07');
 INSERT into LOCAIS values ('32250156034', 'ed08');
 INSERT into LOCAIS values ('01565652046', 'ed09');
 INSERT into LOCAIS values ('01565652046', 'ed10');
+
+-- FORMAS_DE_PAGAMENTO: 'idPagamento','tipo',desconto,parcelaMinima
+INSERT into FORMA_DE_PAGAMENTO values ('fp01', 'Boleto Bancario', 10, 500);
+INSERT into FORMA_DE_PAGAMENTO values ('fp02', 'Cartao de Credito', 0, 200);
+INSERT into FORMA_DE_PAGAMENTO values ('fp03', 'Cartao de Debito', 0, 700);
+INSERT into FORMA_DE_PAGAMENTO values ('fp04', 'PayPal', 5, 300);
+INSERT into FORMA_DE_PAGAMENTO values ('fp05', 'E-cartao', 15, 150);
 
 -- CATEGORIA: 'idCategoria','nomeCategoria'
 INSERT into CATEGORIA values ('ct00', 'Outros');
@@ -182,7 +182,6 @@ INSERT into CARACTERIZACAO values('ct02', 'pr02');
 INSERT into CARACTERIZACAO values('ct02', 'pr04');
 INSERT into CARACTERIZACAO values('ct02', 'pr05');
 INSERT into CARACTERIZACAO values('ct02', 'pr06');
-INSERT into CARACTERIZACAO values('ct02', 'pr06');
 INSERT into CARACTERIZACAO values('ct02', 'pr07');
 INSERT into CARACTERIZACAO values('ct02', 'pr08');
 INSERT into CARACTERIZACAO values('ct02', 'pr09');
@@ -202,18 +201,6 @@ INSERT into CARACTERIZACAO values('ct11', 'pr03');
 INSERT into CARACTERIZACAO values('ct11', 'pr05');
 INSERT into CARACTERIZACAO values('ct12', 'pr06');
 
--- OFERTA: 'idOferta',desconto,freteGratis
-INSERT into OFERTA values('of01', 15, TRUE);
-INSERT into OFERTA values('of02', 5, TRUE);
-INSERT into OFERTA values('of03', 25, FALSE);
-INSERT into OFERTA values('of04', 15, TRUE);
-INSERT into OFERTA values('of05', 20, FALSE);
-INSERT into OFERTA values('of06', 10, TRUE);
-INSERT into OFERTA values('of07', 10, FALSE);
-INSERT into OFERTA values('of08', 15, FALSE);
-INSERT into OFERTA values('of09', 10, TRUE);
-INSERT into OFERTA values('of10', 30, FALSE);
-
 -- CUPOM_DE_DESCONTO: 'codigo','validade',desconto,'idCategoria'
 INSERT into CUPOM_DE_DESCONTO values('cd01', '2019-01-10', 15, 'ct01'); -- desconto de 15% em celulares
 INSERT into CUPOM_DE_DESCONTO values('cd02', '2018-12-31', 30, 'ct13'); -- desconto de 30% em jogos
@@ -225,6 +212,18 @@ INSERT into CUPOM_DE_DESCONTO values('cd07', '2019-12-31', 5,  'ct07'); -- desco
 INSERT into CUPOM_DE_DESCONTO values('cd08', '2020-06-15', 5,  'ct16'); -- desconto de 5%  em roupas
 INSERT into CUPOM_DE_DESCONTO values('cd09', '2019-03-30', 10, 'ct12'); -- desconto de 10% em monitores
 INSERT into CUPOM_DE_DESCONTO values('cd10', '2019-11-06', 50, 'ct20'); -- desconto de 50% em papelaria
+
+-- OFERTA: 'idOferta',desconto,freteGratis
+INSERT into OFERTA values('of01', 15, TRUE);
+INSERT into OFERTA values('of02', 5, TRUE);
+INSERT into OFERTA values('of03', 25, FALSE);
+INSERT into OFERTA values('of04', 15, TRUE);
+INSERT into OFERTA values('of05', 20, FALSE);
+INSERT into OFERTA values('of06', 10, TRUE);
+INSERT into OFERTA values('of07', 10, FALSE);
+INSERT into OFERTA values('of08', 15, FALSE);
+INSERT into OFERTA values('of09', 10, TRUE);
+INSERT into OFERTA values('of10', 30, FALSE);
 
 -- PARCEIRO: 'cnpj','nomeParceiro','papel','endereco','telefone','politica'
 INSERT into PARCEIRO values('72667288000163', 'DELL',            'VENDEDOR E ENTREGADOR','Fernando João Bartelle,35,,95178030',  '5132681445', 'Produtos podem ser devolvido em um prazo de até 15 dias após a entrega.');
@@ -265,16 +264,16 @@ INSERT into PRODUTO values('pr00000023', 'Como as democracias morrem',      'ZAH
 INSERT into PRODUTO values('pr00000024', 'Choque de Cultura: 79 filmes pra assistir enquanto dirige','GALERA', 32.00, 19, 'ct10', '63557512000135', '63557512000135', 'Capa comum: 240 páginas, Editora: Galera, Idioma: Português, ISBN-10: 8501115932, ISBN-13: 978-8501115935, Dimensões do produto: 22,8 x 15,4 x 2 cm');
 
 -- SELECAO: 'codProduto','idCarrinho','quantidade'
-INSERT into SELECAO values('pr00000001', 'cr02', 2); -- 2 fones AKG K92              no carrino de   Luana
-INSERT into SELECAO values('pr00000005', 'cr02', 1); -- 1 ipad mini 4                no carrino de   Luana
-INSERT into SELECAO values('pr00000010', 'cr04', 1); -- 1 Apple X                    no carrino de   Vitor
-INSERT into SELECAO values('pr00000003', 'cr08', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot
-INSERT into SELECAO values('pr00000002', 'cr08', 1); -- 1 fone AKG K72               no carrino de   Elliot
-INSERT into SELECAO values('pr00000024', 'cr08', 3); -- 3 livros "79 filmes ..."     no carrino de   Elliot
-INSERT into SELECAO values('pr00000021', 'cr07', 1); -- 1 lava louças                no carrino de   Ana Maria
-INSERT into SELECAO values('pr00000019', 'cr09', 1); -- 1 cooktop                    no carrino de   Luiza
-INSERT into SELECAO values('pr00000014', 'cr09', 1); -- 1 geladeira CONSUL           no carrino de   Luiza
-INSERT into SELECAO values('pr00000007', 'cr09', 1); -- 1 Monitor AOC                no carrino de   Luiza
+INSERT into SELECAO values('pr00000001', 'c002', 2); -- 2 fones AKG K92              no carrino de   Luana
+INSERT into SELECAO values('pr00000005', 'c002', 1); -- 1 ipad mini 4                no carrino de   Luana
+INSERT into SELECAO values('pr00000010', 'c004', 1); -- 1 Apple X                    no carrino de   Vitor
+INSERT into SELECAO values('pr00000003', 'c008', 1); -- 1 Notebook Dell Inspiron     no carrino de   Elliot
+INSERT into SELECAO values('pr00000002', 'c008', 1); -- 1 fone AKG K72               no carrino de   Elliot
+INSERT into SELECAO values('pr00000024', 'c008', 3); -- 3 livros "79 filmes ..."     no carrino de   Elliot
+INSERT into SELECAO values('pr00000021', 'c007', 1); -- 1 lava louças                no carrino de   Ana Maria
+INSERT into SELECAO values('pr00000019', 'c009', 1); -- 1 cooktop                    no carrino de   Luiza
+INSERT into SELECAO values('pr00000014', 'c009', 1); -- 1 geladeira CONSUL           no carrino de   Luiza
+INSERT into SELECAO values('pr00000007', 'c009', 1); -- 1 Monitor AOC                no carrino de   Luiza
 
 -- PEDIDO: 'numeroPedido',total,'data','cpf','idPagamento'
 INSERT into PEDIDO values ('pd00000001', 469.80,  '2018-06-20', '14525668485', 'fp01'); -- 2*pr00000001 (10% cupom - fones) 10% pelo boleto     -> Jeniffer

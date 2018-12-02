@@ -5,7 +5,7 @@ public abstract class postgreSQLConnection {
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://localhost:5432/ecommerce";
-    static final String USER = "trabalhoFBD";
+    static final String USER = "trabalhofbd";
     static final String PASSWORD = "senhafinalFBD";
 
     public static void conectar(String password){

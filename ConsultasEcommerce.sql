@@ -76,7 +76,11 @@ FROM produto NATURAL JOIN oferta
 WHERE desconto >= 5 AND codProduto IN(SELECT DISTINCT codProduto
 									  FROM produto NATURAL JOIN cupom_de_desconto
 									  WHERE desconto >= 5);
-									  
+
+
+-- Os produtos com maiores cupons de descontos que estão no carrinho do usuario Y
+SELECT nomeProduto
+FROM produto
 
 ----------- GATILHOS
 CREATE TRIGGER verificaEstoque

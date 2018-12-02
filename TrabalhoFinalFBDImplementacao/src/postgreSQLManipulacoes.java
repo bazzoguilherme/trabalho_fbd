@@ -5,9 +5,9 @@ import java.sql.SQLException;
 public abstract class postgreSQLManipulacoes {
     public static ResultSet parceirosVendaMaiorXProd(int quantidadeProdutoAnalise){
         String s = "SELECT nomeParceiro "
-                 + "FROM PARCEIRO JOIN PRODUTO ON(cnpj, cnpjVendedor) NATURAL JOIN COMPRA "
+                 + "FROM PARCEIRO JOIN PRODUTO ON(cnpj = cnpjVendedor) NATURAL JOIN COMPRA "
                  + "GROUP BY nomeParceiro "
-                 + "HAVING COUNT(DISTINCT codProduto) > ?;";
+                 + "HAVING COUNT(DISTINCT codProduto) >= ?;";
 
         PreparedStatement stmt = null;
 
@@ -33,9 +33,9 @@ public abstract class postgreSQLManipulacoes {
         String s = "SELECT DISTINCT nomeCategoria "
                  + "FROM CATEGORIA C "
                  + "WHERE idCategoria != 'ct03' AND NOT EXISTS (SELECT * "
-                                                             + "FROM CATEGORIZACAO "
+                                                             + "FROM CARACTERIZACAO "
                                                              + "WHERE idCategoria = 'ct03' AND idPropriedade NOT IN(SELECT DISTINCT idPropriedade "
-                                                                                                                 + "FROM CATEGORIZACAO "
+                                                                                                                 + "FROM CARACTERIZACAO "
                                                                                                                  + "WHERE idCategoria = C.idCategoria));";
 
         PreparedStatement stmt = null;

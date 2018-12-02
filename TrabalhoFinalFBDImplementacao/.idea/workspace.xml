@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="828ab9cd-b80d-4a2b-a70f-ae463e48357a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ConsultasEcommerce.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsultasEcommerce.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e_commerceInsercoes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../e_commerceInsercoes.sql" afterDir="false" />
-    </list>
+    <list default="true" id="828ab9cd-b80d-4a2b-a70f-ae463e48357a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/userInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="189">
+              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,7 +165,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543791486268" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543792281093" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/postgresql-42.2.5.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -218,12 +214,12 @@
       <workItem from="1543611251393" duration="1102000" />
       <workItem from="1543625300668" duration="1818000" />
       <workItem from="1543665233168" duration="1213000" />
-      <workItem from="1543754273139" duration="13082000" />
+      <workItem from="1543754273139" duration="13679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25511000" />
+    <option name="totallyTimeSpent" value="26108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -309,8 +305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/userInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="189">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

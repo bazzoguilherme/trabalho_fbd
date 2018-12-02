@@ -14,4 +14,4 @@ Para os relacionamentos, seguimos as regras abaixo (Note que especificamos apena
 
 Para realizar o mapeamento da relação de Generalização, decidimos criar apenas uma tabela com um identificador "papel" (que determina o tipo da entidade). Optamos por realizar esse mapeamento porque a generalização é total, e como as estidades especializadas não tem atributos específicos consideramos que esse método de mapeamento era o mais vantajoso.
 
-Em relação às chaves estrangeiras, seguimos a base descrita em '...' para definir os casos de atualização e deleção.
+Em relação às chaves estrangeiras, seguimos as normas descritas no dicionario para definir os casos de atualização e deleção.

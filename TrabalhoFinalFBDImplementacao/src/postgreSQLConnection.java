@@ -1,14 +1,14 @@
 import java.sql.*;
 
-public class postgreSQLConnection {
+public abstract class postgreSQLConnection {
     private static Connection conn = null;
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/aeroporto";
-    static final String USER = "guilherme";
-    static final String PASSWORD = "xxx";
+    static final String DB_URL = "jdbc:postgresql://localhost:5432/ecommerce";
+    static final String USER = "trabalhoFBD";
+    static final String PASSWORD = "senhafinalFBD";
 
-    public void connectar(String password){
+    public static void conectar(String password){
         try{
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, USER, password);
@@ -19,7 +19,7 @@ public class postgreSQLConnection {
         }
     }
 
-    public void connectar(){
+    public static void conectar(){
         try{
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
@@ -30,7 +30,7 @@ public class postgreSQLConnection {
         }
     }
 
-    public void desconectar(){
+    public static void desconectar(){
         try{
             conn.close();
         } catch (SQLException e){
@@ -38,12 +38,12 @@ public class postgreSQLConnection {
         }
     }
 
-    public Connection getConn(){
+    public static Connection getConn(){
         try {
             if (conn != null && !conn.isClosed()) {
                 return conn;
             } else {
-                this.connectar();
+                conectar();
                 return conn;
             }
         } catch (SQLException e) {

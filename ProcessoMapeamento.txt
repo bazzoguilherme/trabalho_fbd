@@ -3,12 +3,15 @@ Descrição do Processo de Mapeamento:
 Após finalizado o processo de modelagem da aplicação, a dupla realizou o mapeamento do modelo para SQL.
 Foi adotado o padrão em que o nome das tabelas é maiúsculo e seus atributos minúsculos (caso o atributo seja composto por mais de uma palavra, cada palavra é inicializada com letra maiúscula, com exeção da primeira).
 O primeiro passo realizado foi transformar as entidades no modelo relacional em tabelas no banco de dados.
-Para as entidades sem identificador único, foi criada uma chave primária para identificá-lo. Para as entidades que o identificador único era do tipo "varchar" foi criado um novo atributo que facilitasse a manipulação como chave primária (que não for muito extenso).
+Para as entidades sem identificador único, foi criada uma chave primária para identificá-lo. Para as entidades que o identificador único era do tipo "varchar" foi criado um novo atributo que facilitasse a manipulação como chave primária (em nosso caso usamos char(x)) e, nesses casos, mantemos o identificador anterior como unique.
 Quando uma entidade tem atributos multivalorados, é feita uma nova tabela para esses atributos, os quais são relacionados com a tabela o qual os tinha anteriormente.
 
-Para os relacionamentos, seguimos as regras abaixo:
+Para os relacionamentos, seguimos as regras abaixo (Note que especificamos apenas os tipos de relacionamento encontrados na modelagem):
     (1,1 - 1,1): Fusão de tabelas;
     (0,1 - 0,n): Adição de coluna na tabela que desempenha papel com cardinalidade máxima 1 (chave estrangeira deve admitir valor nulo);
     (1,1 - 0,n / 1,1 - 1,n): Adição de coluna na tabela que desempenha papel com cardinalidade máxima 1 (chave estrangeira não admite valor nulo);
     (0,n - 0,n / 0,n - 1,n /  1,n - 1,n) : Criação de nova tabela para o relacionamento, em que sua chave primária é a junção das chaves primárias das duas entidades sendo relacionadas, e adição dos atributos do relacionamento para a tabela (Caso o relacionamento tenha um atributo único, este será inserido como como chave primária também).
 
+Para realizar o mapeamento da relação de Generalização, decidimos criar apenas uma tabela com um identificador "papel" (que determina o tipo da entidade). Optamos por realizar esse mapeamento porque a generalização é total, e como as estidades especializadas não tem atributos específicos consideramos que esse método de mapeamento era o mais vantajoso.
+
+Em relação às chaves estrangeiras, seguimos a base descrita em '...' para definir os casos de atualização e deleção.

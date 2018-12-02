@@ -5,17 +5,17 @@ import java.sql.Statement;
 
 public class Main {
     public static userInterface userInterface = new userInterface();
-    public static postgreSQLConnection postgreConnection = new postgreSQLConnection();
 
     public static void main(String[] args) {
 //        String pass = new userInterface().pedeSenha();
-        postgreConnection.connectar();
+
+        postgreSQLConnection.conectar();
 
         String s = "SELECT MAX(salario) AS maxSalario FROM piloto WHERE companhia=?;";
 
         PreparedStatement stmt = null;
         try{
-            stmt = postgreConnection.getConn().prepareStatement(s);
+            stmt = postgreSQLConnection.getConn().prepareStatement(s);
 
             stmt.setString(1, "gol");
             System.out.println(stmt);
@@ -29,6 +29,6 @@ public class Main {
             e.printStackTrace(System.err);
         }
 
-        postgreConnection.desconectar();
+        postgreSQLConnection.desconectar();
     }
 }

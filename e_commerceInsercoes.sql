@@ -130,46 +130,46 @@ INSERT into VALOR values ('v036', 'Portugues');
 INSERT into VALOR values ('v037', 'Ingles');
 
 -- VALORACAO: 'idPropriedade','idValor'
-INSERT into VALORACAO values('pr01', 'v001');
+INSERT into VALORACAO values('pr01', 'v001'); -- Wifi: SIM / NAO
 INSERT into VALORACAO values('pr01', 'v002');
-INSERT into VALORACAO values('pr02', 'v001');
-INSERT into VALORACAO values('pr02', 'v002');
-INSERT into VALORACAO values('pr03', 'v003');
+INSERT into VALORACAO values('pr02', 'v001'); -- Bateria Inclusa: SIM / NAO
+INSERT into VALORACAO values('pr02', 'v002'); 
+INSERT into VALORACAO values('pr03', 'v003'); -- Tamanho Memoria: 8-256 GB
 INSERT into VALORACAO values('pr03', 'v004');
 INSERT into VALORACAO values('pr03', 'v005');
 INSERT into VALORACAO values('pr03', 'v006');
 INSERT into VALORACAO values('pr03', 'v007');
 INSERT into VALORACAO values('pr03', 'v008');
-INSERT into VALORACAO values('pr04', 'v009');
+INSERT into VALORACAO values('pr04', 'v009'); -- Tamanho HD: 1/2 TB
 INSERT into VALORACAO values('pr04', 'v010');
-INSERT into VALORACAO values('pr05', 'v011');
+INSERT into VALORACAO values('pr05', 'v011'); --Sistema Operacional : Windows10 / Android 7-8 / IOS
 INSERT into VALORACAO values('pr05', 'v012');
 INSERT into VALORACAO values('pr05', 'v013');
 INSERT into VALORACAO values('pr05', 'v014');
-INSERT into VALORACAO values('pr06', 'v015');
+INSERT into VALORACAO values('pr06', 'v015'); -- Tamanho da Tela: 21,5 / 23 / 25 / 27 polegadas
 INSERT into VALORACAO values('pr06', 'v016');
 INSERT into VALORACAO values('pr06', 'v017');
 INSERT into VALORACAO values('pr06', 'v018');
-INSERT into VALORACAO values('pr07', 'v019');
+INSERT into VALORACAO values('pr07', 'v019'); -- Cor: Preto / Cinza Marine / Cinza Espacial / Vermelho
 INSERT into VALORACAO values('pr07', 'v020');
 INSERT into VALORACAO values('pr07', 'v021');
 INSERT into VALORACAO values('pr07', 'v022');
-INSERT into VALORACAO values('pr08', 'v023');
+INSERT into VALORACAO values('pr08', 'v023'); -- Ano: 2016-2018
 INSERT into VALORACAO values('pr08', 'v024');
 INSERT into VALORACAO values('pr08', 'v025');
 INSERT into VALORACAO values('pr08', 'v026');
-INSERT into VALORACAO values('pr09', 'v027');
-INSERT into VALORACAO values('pr10', 'v001');
+INSERT into VALORACAO values('pr09', 'v027'); -- Processador: Intel
+INSERT into VALORACAO values('pr10', 'v001'); -- Dual SIM: SIM / NAO
 INSERT into VALORACAO values('pr10', 'v002');
-INSERT into VALORACAO values('pr11', 'v028');
+INSERT into VALORACAO values('pr11', 'v028'); -- Voltagem: 110 / 220 v
 INSERT into VALORACAO values('pr11', 'v029');
-INSERT into VALORACAO values('pr12', 'v030');
+INSERT into VALORACAO values('pr12', 'v030'); -- Capacidade: 5/10/12/15 kg
 INSERT into VALORACAO values('pr12', 'v031');
 INSERT into VALORACAO values('pr12', 'v032');
 INSERT into VALORACAO values('pr12', 'v033');
-INSERT into VALORACAO values('pr13', 'v034');
+INSERT into VALORACAO values('pr13', 'v034'); -- Bocas: 4/5 bocas
 INSERT into VALORACAO values('pr13', 'v035');
-INSERT into VALORACAO values('pr14', 'v036');
+INSERT into VALORACAO values('pr14', 'v036'); -- Idioma: Portugues/Ingles
 INSERT into VALORACAO values('pr14', 'v037');
 
 -- CARACTERIZACAO: 'idCategoria','idPropriedade'

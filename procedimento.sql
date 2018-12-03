@@ -47,7 +47,13 @@ BEGIN
 		             WHERE codProduto = NEW.codProduto)) 
 	THEN
 		DELETE FROM compra 
-		WHERE codProduto = NEW.codProduto AND numeroPedido = NEW.numeroPedido;
+		WHERE codProduto = NEW.codProduto AND numeroPedido = NEW.numeroPedido
+		RETURN NEW;
+
+	ELSE
+		UPDATE produto
+		SET estoque = estoque - NEW.quantidade
+		WHERE codProduto = NEW.codProduto
 		RETURN NEW;
 	END IF;
 
@@ -56,7 +62,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 
-CREATE TRIGGER inserePedido 
-AFTER INSERT ON pedido
+CREATE TRIGGER insereCompra 
+AFTER INSERT ON compra
 FOR EACH ROW 
 EXECUTE PROCEDURE verificaEstoque();

@@ -36,7 +36,7 @@ WHERE marca = 'BRASTEMP' AND preco >= (SELECT AVG(preco)
 		        	       WHERE marca = 'BRASTEMP');
 
 
--- Selecionar os produtos que apresentem uma oferta com desconto maior ou igual que 5% e um cupom de desconto com desconto maior ou igual que 5%
+-- Selecionar os produtos que apresentem uma oferta com desconto maior ou igual que 5% e um cupom de desconto com desconto maior ou igual que 5%.
 -- Utilização: pode ser um filtro realizado por um cliente que deseja ver produtos com descontos ou uma seleção realizada pelo e-commerce para realizar 
 -- anúncios de produtos com descontos. 
 SELECT DISTINCT codProduto, nomeProduto

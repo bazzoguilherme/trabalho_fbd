@@ -46,13 +46,13 @@ BEGIN
 		             WHERE codProduto = NEW.codProduto)) 
 	THEN
 		DELETE FROM compra 
-		WHERE codProduto = NEW.codProduto AND numeroPedido = NEW.numeroPedido
+		WHERE codProduto = NEW.codProduto AND numeroPedido = NEW.numeroPedido;
 		RETURN NEW;
 
 	ELSE
 		UPDATE produto
 		SET estoque = estoque - NEW.quantidade
-		WHERE codProduto = NEW.codProduto
+		WHERE codProduto = NEW.codProduto;
 		RETURN NEW;
 	END IF;
 
@@ -69,9 +69,7 @@ EXECUTE PROCEDURE verificaEstoque();
 
 -- TESTE
 -- Compra não adicionada
--- insert into compra
--- values('pr00000001', 'pd00000002', 40, 'koijnmjhuy');
+-- INSERT into COMPRA values('pr00000001', 'pd10000000', 40, 290, 'n100000000');
 
 -- Compra adicionada e estoque reduzido
--- inserto into compra
--- valies('pr00000001', 'pd00000002', 5, 'koijnmjhuy');
+-- INSERT into COMPRA values('pr00000001', 'pd10000000', 2, 290, 'n100000000');

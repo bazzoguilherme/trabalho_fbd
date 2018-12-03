@@ -38,7 +38,7 @@ public class userInterface {
                 consultas();
                 break;
             case "2":
-                procesimentos();
+                procedimentos();
                 break;
             default:
                 break;
@@ -82,16 +82,19 @@ public class userInterface {
         }
     }
 
-    public void procesimentos(){
+    public void procedimentos(){
         String opcao = this.menuProcedimentos();
         switch (opcao){
             case "1":
+                System.out.println("ANTES DO PROCEDIMENTO");
+                this.consultaExemplo1();
+                this.executaExemplo1();
+                System.out.println("DEPOIS DO PROCEDIMENTO");
                 this.consultaExemplo1();
                 break;
             case "2":
+                System.out.println("ANTES DO PROCEDIMENTO");
                 this.consultaExemplo2();
-                break;
-            case "3":
                 this.consultaExemplo3();
                 break;
             default:
@@ -115,7 +118,7 @@ public class userInterface {
             limpaTela();
             imprimeOpcoesProcedimentos();
             opcao = this.pedeString("uma das opcoes de consultas acima: ");
-        }while(!opcao.toUpperCase().equals("S") && !opcao.equals("1") && !opcao.equals("2") && !opcao.equals("3"));
+        }while(!opcao.toUpperCase().equals("S") && !opcao.equals("1") && !opcao.equals("2"));
         return opcao;
     }
 
@@ -131,7 +134,7 @@ public class userInterface {
 
     private static void imprimeOpcoesProcedimentos(){
         System.out.println("1 -" + PROCEDIMENTO1);
-        System.out.println("1 -" + PROCEDIMENTO2);
+        System.out.println("2 -" + PROCEDIMENTO2);
         System.out.println("Para sair digite 'S'.");
     }
 
@@ -252,6 +255,18 @@ public class userInterface {
         }catch (SQLException e){
             e.printStackTrace(System.err);
         }
+    }
+
+    private void executaExemplo1(){
+        postgreSQLConsultas.exemploProcedimento1();
+    }
+
+    private void executaExemplo2_1(){
+        postgreSQLConsultas.exemploProcedimento2_1();
+    }
+
+    private void executaExemplo2_2(){
+        postgreSQLConsultas.exemploProcedimento2_2();
     }
 
 

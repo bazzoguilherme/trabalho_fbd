@@ -9,7 +9,7 @@ public class Main {
 
         postgreSQLConnection.conectar();
 
-        userInterface.menu();
+        userInterface.menuPrincipal();
 
         userInterface.closeInputScanner();
         postgreSQLConnection.desconectar();

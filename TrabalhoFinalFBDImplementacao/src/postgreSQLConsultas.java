@@ -215,5 +215,46 @@ public abstract class postgreSQLConsultas {
     }
 
 
+    public static void exemploProcedimento1(){
+        String s = "INSERT into AVALIACAO values('a013', '2000-05-05', 3, 't',  '01262510965', 'pr00000001');";
+
+        PreparedStatement stmt = null;
+        try {
+            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+
+            stmt.executeUpdate(s);
+
+        } catch (SQLException e) {
+            e.printStackTrace(System.err);
+        }
+    }
+
+    public static void exemploProcedimento2_1(){
+        String s = "INSERT into COMPRA values('pr00000001', 'pd00000002', 40, 290, 'n100000000');";
+
+        PreparedStatement stmt = null;
+        try {
+            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+
+            stmt.executeUpdate(s);
+
+        } catch (SQLException e) {
+            e.printStackTrace(System.err);
+        }
+    }
+
+    public static void exemploProcedimento2_2(){
+        String s = "INSERT into COMPRA values('pr00000001', 'pd10000000', 2, 290, 'n100000000');";
+
+        PreparedStatement stmt = null;
+        try {
+            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+
+            stmt.executeUpdate(s);
+
+        } catch (SQLException e) {
+            e.printStackTrace(System.err);
+        }
+    }
 
 }

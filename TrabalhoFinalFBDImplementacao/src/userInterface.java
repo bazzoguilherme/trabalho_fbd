@@ -48,6 +48,7 @@ public class userInterface {
     public void menuPrincipal(){
         String opcao = "";
         while(!opcao.toUpperCase().equals("S")){
+            limpaTela();
             System.out.println("1 - Consultas");
             System.out.println("2 - Procedimentos");
             System.out.println("S - Sair");
@@ -84,6 +85,7 @@ public class userInterface {
 
     public void procedimentos(){
         String opcao = this.menuProcedimentos();
+        limpaTela();
         switch (opcao){
             case "1":
                 System.out.println("ANTES DO PROCEDIMENTO");
@@ -258,7 +260,7 @@ public class userInterface {
 
             System.out.println("codProduto: numeroPedido - NotaFiscal");
             while (rs.next()) {
-                System.out.println(rs.getString("codProduto") + ": " + rs.getString("numeroPedido") + " - " + rs.getString("NotaFiscal"));
+                System.out.println(rs.getString("codProduto") + ": " + rs.getString("numeroPedido") + " - " + rs.getString("numeroNotaFiscal"));
             }
         }catch (SQLException e){
             e.printStackTrace(System.err);

@@ -69,7 +69,7 @@ EXECUTE PROCEDURE verificaEstoque();
 
 -- TESTE
 -- Compra não adicionada
--- INSERT into COMPRA values('pr00000001', 'pd10000000', 40, 290, 'n100000000');
+-- INSERT into COMPRA values('pr00000001', 'pd00000002', 40, 290, 'n100000000');
 
 -- Compra adicionada e estoque reduzido
--- INSERT into COMPRA values('pr00000001', 'pd10000000', 2, 290, 'n100000000');
+-- INSERT into COMPRA values('pr00000001', 'pd00000002', 2, 290, 'n100000000');

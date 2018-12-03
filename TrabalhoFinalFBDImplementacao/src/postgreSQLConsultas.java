@@ -176,7 +176,7 @@ public abstract class postgreSQLConsultas {
     public static ResultSet consultaExemploGatilho2_1(){
 
         String s = "SELECT codProduto, estoque "
-                 + "FROM PRODUDO;";
+                 + "FROM PRODUTO;";
 
         PreparedStatement stmt = null;
         try {
@@ -219,9 +219,9 @@ public abstract class postgreSQLConsultas {
     public static void exemploProcedimento1(){
         String s = "INSERT into AVALIACAO values('a013', '2000-05-05', 3, 't',  '01262510965', 'pr00000001');";
 
-        PreparedStatement stmt = null;
+        Statement stmt = null;
         try {
-            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+            stmt = postgreSQLConnection.getConn().createStatement();
 
             stmt.executeUpdate(s);
 
@@ -233,9 +233,9 @@ public abstract class postgreSQLConsultas {
     public static void exemploProcedimento2_1(){
         String s = "INSERT into COMPRA values('pr00000001', 'pd00000002', 40, 290, 'n100000000');";
 
-        PreparedStatement stmt = null;
+        Statement stmt = null;
         try {
-            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+            stmt = postgreSQLConnection.getConn().createStatement();
 
             stmt.executeUpdate(s);
 

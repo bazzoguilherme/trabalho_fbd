@@ -215,3 +215,7 @@ create table COMPRA(
 );
 
 
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO trabalhofbd;
+GRANT INSERT ON ALL TABLES IN SCHEMA public TO trabalhofbd;
+GRANT UPDATE ON ALL TABLES IN SCHEMA public TO trabalhofbd;
+GRANT DELETE ON ALL TABLES IN SCHEMA public TO trabalhofbd;

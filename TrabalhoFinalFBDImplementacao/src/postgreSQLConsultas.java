@@ -1,6 +1,7 @@
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public abstract class postgreSQLConsultas {
     public static ResultSet consulta1(int quantidadeProdutoAnalise){
@@ -244,11 +245,11 @@ public abstract class postgreSQLConsultas {
     }
 
     public static void exemploProcedimento2_2(){
-        String s = "INSERT into COMPRA values('pr00000001', 'pd10000000', 2, 290, 'n100000000');";
+        String s = "INSERT into COMPRA values('pr00000001', 'pd00000002', 2, 290, 'n100000000');";
 
-        PreparedStatement stmt = null;
+        Statement stmt = null;
         try {
-            stmt = postgreSQLConnection.getConn().prepareStatement(s);
+            stmt = postgreSQLConnection.getConn().createStatement();
 
             stmt.executeUpdate(s);
 

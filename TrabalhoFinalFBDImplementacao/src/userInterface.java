@@ -88,12 +88,20 @@ public class userInterface {
             case "1":
                 System.out.println("ANTES DO PROCEDIMENTO");
                 this.consultaExemplo1();
-                this.executaExemplo1();
                 System.out.println("DEPOIS DO PROCEDIMENTO");
+                this.executaExemplo1();
                 this.consultaExemplo1();
                 break;
             case "2":
                 System.out.println("ANTES DO PROCEDIMENTO");
+                this.consultaExemplo2();
+                this.consultaExemplo3();
+                System.out.println("DEPOIS DO PROCEDIMENTO (COM ERRO ESPERADO)");
+                this.executaExemplo2_1();
+                this.consultaExemplo2();
+                this.consultaExemplo3();
+                System.out.println("DEPOIS DO PROCEDIMENTO (SEM ERRO)");
+                this.executaExemplo2_2();
                 this.consultaExemplo2();
                 this.consultaExemplo3();
                 break;

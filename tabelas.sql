@@ -213,9 +213,3 @@ create table COMPRA(
     unique(numeroNotaFiscal),
     primary key (codProduto, numeroPedido)
 );
-
-
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO trabalhofbd;
-GRANT INSERT ON ALL TABLES IN SCHEMA public TO trabalhofbd;
-GRANT UPDATE ON ALL TABLES IN SCHEMA public TO trabalhofbd;
-GRANT DELETE ON ALL TABLES IN SCHEMA public TO trabalhofbd;

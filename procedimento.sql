@@ -35,7 +35,6 @@ EXECUTE PROCEDURE verificaAvaliacao();
 
 
 
-
 -- Uma compra não pode ser realizada se não houver em estoque a quantidade de unidades de um produtos que o cliente deseja comprar.
 -- Assim, quando uma compra é inserida, verifica-se se existe em estoque a quantidade requerida por ele. Caso não, a compra é removida.
 -- Ainda, deseja-se manter o estoque atualizado. Portanto, caso a compra seja válida, é reduzido do estoque o número de únidades compradas.   
@@ -66,3 +65,13 @@ CREATE TRIGGER insereCompra
 AFTER INSERT ON compra
 FOR EACH ROW 
 EXECUTE PROCEDURE verificaEstoque();
+
+
+-- TESTE
+-- Compra não adicionada
+-- insert into compra
+-- values('pr00000001', 'pd00000002', 40, 'koijnmjhuy');
+
+-- Compra adicionada e estoque reduzido
+-- inserto into compra
+-- valies('pr00000001', 'pd00000002', 5, 'koijnmjhuy');
